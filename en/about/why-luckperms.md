@@ -1,3 +1,8 @@
+---
+title: "Why LuckPerms?"
+description: Why server admins choose LuckPerms.
+---
+
 **Hi there!** 👋
 
 Welcome to the LuckPerms project - it's good to have you!
@@ -43,12 +48,12 @@ Anyone can use the editor, it works out of the box and doesn't require any extra
 
 ![](../img/whyluckperms-1.png)
 
-It's super easy to use. You can try out a [demo session](https://luckperms.net/editor/demo) or have a look at the editor [wiki page](Web-Editor).
+It's super easy to use. You can try out a [demo session](https://luckperms.net/editor/demo) or have a look at the editor [wiki page](/wiki/features/web-editor).
 
 ___
 
 ### Verbose
-LuckPerms has a [verbose](Verbose) system, which allows you to monitor permission checks made by other plugins, occurring in real time.
+LuckPerms has a [verbose](/wiki/features/verbose) system, which allows you to monitor permission checks made by other plugins, occurring in real time.
 
 You can trace exactly where permission checks originate from - right down to the line of code which caused the check!
 
@@ -59,7 +64,7 @@ Verbose recordings can be viewed in a special web app for easier analysis and re
 ___
 
 ### Permission trees
-LuckPerms allows you [build "permission trees"](General-Commands#lp-tree-scope-player) of all permissions known to the server. The data is populated using permissions registered to the server by plugins.
+LuckPerms allows you [build "permission trees"](/wiki/commands/general#lp-tree-scope-player) of all permissions known to the server. The data is populated using permissions registered to the server by plugins.
 
 The tree will grow over time as permissions checked for by plugins on the server are added.
 
@@ -70,7 +75,7 @@ Permission trees can be viewed in a special web app for easy viewing and interpr
 ___
 
 ### Command interface & tab completion
-The command system is super easy to use and understand. As well as the [documentation available here on the wiki](Command-Usage), command usage and listings can also be viewed in-game.
+The command system is super easy to use and understand. As well as the [documentation available here on the wiki](/wiki/commands), command usage and listings can also be viewed in-game.
 
 ![](../img/whyluckperms-3.png)
 

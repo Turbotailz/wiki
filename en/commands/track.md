@@ -1,4 +1,9 @@
-This is a sub-page of the main **Command Usage** page. [Click here to go back.](Command-Usage)
+---
+title: Track commands
+description: Commands for tracks.
+---
+
+This is a sub-page of the main **Command Usage** page. [Click here to go back.](/wiki/commands)
 
 Key things to remember from the main page:
 

@@ -1,3 +1,8 @@
+---
+title: Placeholders
+description: PlaceholderAPI and other expansions.
+---
+
 LuckPerms has a few placeholders available for use in supported plugins.
 
 ### PlaceholderAPI
@@ -36,8 +41,8 @@ For example, the `%luckperms_meta%` placeholder requires a `<meta key>` argument
 | `%luckperms_suffix%`                            |                              | Returns the players suffix                                   |
 | `%luckperms_meta%`                              | `<meta key>`                 | Returns a single value for the given meta key                |
 | `%luckperms_meta_all%`                          | `<meta key>`                 | Returns all assigned values for the given meta key           |
-| `%luckperms_prefix_element%`                    | `<element>`                  | Returns a prefix element using the given "meta stack" element definition. See [Prefix Stacking](Prefix-&-Suffix-Stacking) |
-| `%luckperms_suffix_element%`                    | `<element>`                  | Returns a suffix element using the given "meta stack" element definition. See [Prefix Stacking](Prefix-&-Suffix-Stacking) |
+| `%luckperms_prefix_element%`                    | `<element>`                  | Returns a prefix element using the given "meta stack" element definition. See [Prefix Stacking](/wiki/guides/prefix-stacking) |
+| `%luckperms_suffix_element%`                    | `<element>`                  | Returns a suffix element using the given "meta stack" element definition. See [Prefix Stacking](/wiki/guides/prefix-stacking) |
 | `%luckperms_context%`                           | `[context key]` (*optional*) | Returns all of the players current contexts. If a key is given as an argument, then only the values corresponding to the given key are returned. |
 | `%luckperms_groups%`                            |                              | Returns a list of the groups directly inherited by the player. |
 | `%luckperms_inherited_groups%`                  |                              | Returns a list of all of the groups inherited (directly or indirectly) by the player. |

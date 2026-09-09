@@ -1,10 +1,15 @@
-This page is a continuation of the main [Migration guide](Migration). 
+---
+title: Migrating from GroupManager or PermissionsEx
+description: Specific migration notes for GM and PEX.
+---
+
+This page is a continuation of the main [Migration guide](/wiki/guides/migration). 
 
 Once you've followed the instructions to move your data from GroupManager or PermissionsEx to LuckPerms, the resources on this page will hopefully help you to quickly get up to speed!
 
 Firstly, there are some tables below which compare the commands in GroupManager and PermissionsEx with their **equivalents** in LuckPerms. If you knew how to do something in GM or PEX, hopefully these tables will help you to quickly find how to do it in LuckPerms.
 
-Of course, there is also the [full command documentation for LuckPerms](Command-Usage), which is probably better to get used to!
+Of course, there is also the [full command documentation for LuckPerms](/wiki/commands), which is probably better to get used to!
 
 Secondly, there is an additional resource that you can install to your server that will allow you to keep using *some* PermissionsEx and GroupManager commands, and have them automatically routed to LuckPerms. You can find more information about that [here](https://github.com/LuckPerms/LuckPermsCompat). However, generally, we encourage that you "rip off the bandaid" so to speak and get used to the *proper* LuckPerms commands right away - with a little time they will become 2nd nature just like GM or PEX commands once did!
 
@@ -54,7 +59,7 @@ Good luck, and we hope you enjoy using LuckPerms!
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | pex                                                          | lp                                                           |
 | pex reload                                                   | lp sync                                                      |
-| pex toggle debug                                             | [lp verbose \<option>](Verbose)                              |
+| pex toggle debug                                             | [lp verbose \<option>](/wiki/features/verbose)                              |
 | pex user \<user\> check \<permission\>                       | lp user \<user\> haspermission \<permission\>                |
 | pex backend                                                  | lp info                                                      |
 | pex import \<backend\>                                       | lp export \<file\> / lp import \<file\>                      |

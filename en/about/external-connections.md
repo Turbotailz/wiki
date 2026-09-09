@@ -1,3 +1,8 @@
+---
+title: External connections
+description: What LuckPerms connects to, and why.
+---
+
 ### Summary
 The tl;dr is...
 
@@ -11,7 +16,7 @@ ___
 
 ### Downloading libraries
 
-LuckPerms makes use of a lot of libraries - all of which are listed [here](Credits#open-source).
+LuckPerms makes use of a lot of libraries - all of which are listed [here](/wiki/about/credits#open-source).
 
 The plugin can be configured and used in a number of ways. For example, it supports a number of storage methods, each of which require their own set of drivers. Most plugins simply bundle (or "shade") these libraries into the plugin jar file - however, this is not practical for LuckPerms, as the high number of libraries would produce a huge final jar size. The solution is to download the *required* libraries at runtime, depending on the configuration being used.
 
@@ -49,7 +54,7 @@ ___
 
 ### Downloading translation bundles
 
-The messages used in LuckPerms commands have kindly been [translated by the community](Locale-and-Translations).
+The messages used in LuckPerms commands have kindly been [translated by the community](/wiki/about/locale).
 
 These translations are automatically exported, compiled into "translation bundle" files, and then made available from an API endpoint. This means that translations can be added/improved over time, without requiring a recompilation of the plugin.
 
@@ -87,7 +92,7 @@ Data is posted to & read from https://usercontent.luckperms.net - effectively a 
 
 Again, the source is freely available here: https://github.com/lucko/bytebin
 
-Additional technical details can be found [here](Web-Editor-Technical-Details).
+Additional technical details can be found [here](/wiki/features/web-editor/technical).
 
 ___
 

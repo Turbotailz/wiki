@@ -1,3 +1,8 @@
+---
+title: Switching storage types
+description: Change LuckPerms storage backend.
+---
+
 ## How to
 Switching datastores is easy.
 

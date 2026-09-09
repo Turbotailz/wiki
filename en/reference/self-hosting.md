@@ -1,3 +1,8 @@
+---
+title: Self-hosting the web interfaces
+description: Host the LuckPerms web editor and viewers yourself.
+---
+
 LuckPerms has a number of online editors / viewers built into the plugin. The interfaces have been designed such that individual users/servers do not need to host their own instances, and public versions everyone can use are deployed in the following locations:
 
 * https://luckperms.net/editor/

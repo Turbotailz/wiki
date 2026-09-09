@@ -1,4 +1,9 @@
-This is a sub-page of the main **Command Usage** page. [Click here to go back.](Command-Usage)
+---
+title: User commands
+description: Commands for managing users.
+---
+
+This is a sub-page of the main **Command Usage** page. [Click here to go back.](/wiki/commands)
 
 Key things to remember from the main page:
 
@@ -12,9 +17,9 @@ ___
 
 ### Index
 *  [/lp user \<user\> `info`](#lp-user-user-info)
-*  [/lp user \<user\> `permission`](Permission-Commands)
-*  [/lp user \<user\> `parent`](Parent-Commands)
-*  [/lp user \<user\> `meta`](Meta-Commands)
+*  [/lp user \<user\> `permission`](/wiki/commands/permission)
+*  [/lp user \<user\> `parent`](/wiki/commands/parent)
+*  [/lp user \<user\> `meta`](/wiki/commands/meta)
 *  [/lp user \<user\> `editor`](#lp-user-user-editor)
 *  [/lp user \<user\> `promote` \<track\> [context...]](#lp-user-user-promote-track-context-flags)
 *  [/lp user \<user\> `demote` \<track\> [context...]](#lp-user-user-demote-track-context-flags)
@@ -37,7 +42,7 @@ ___
 **Permission**: luckperms.user.promote  
 **Arguments**:  
 * `<track>` - the track to promote along
-* `[context...]` - the [contexts](Context) to promote in
+* `[context...]` - the [contexts](/wiki/features/context) to promote in
 **Flags**:
 * `[--dont-add-to-first]` - the command will fail to run if the user doesn't have parent groups on said track
 * `[-s]` - silent, don't print the user progress on the track
@@ -49,7 +54,7 @@ ___
 **Permission**: luckperms.user.demote  
 **Arguments**:  
 * `<track>` - the track to demote along
-* `[context...]` - the [contexts](Context) to demote in
+* `[context...]` - the [contexts](/wiki/features/context) to demote in
 **Flags**:
 * `[--dont-remove-from-first]` - the command will fail to run if the user is on the first position on the track
 * `[-s]` - silent, don't print the user progress on the track
@@ -65,7 +70,7 @@ ___
 #### `/lp user <user> clear [context...]`  
 **Permission**: luckperms.user.clear  
 **Arguments**:  
-* `[context...]` - the [contexts](Context) to filter by
+* `[context...]` - the [contexts](/wiki/features/context) to filter by
 
 Clears the user's permissions, parent groups and meta.
 

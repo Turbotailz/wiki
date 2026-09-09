@@ -1,3 +1,8 @@
+---
+title: Default groups
+description: How the default group is assigned.
+---
+
 The way we handle defaults and default groups in LuckPerms is probably the most disliked feature in the whole plugin. Recently we've been adding some additional / alternative features to the plugin to allow a greater degree of control compared with what's seen in any of the other permission plugins out there, and hopefully making our approach people's favourite part of the plugin, not their least favourite.
 
 # Where to start

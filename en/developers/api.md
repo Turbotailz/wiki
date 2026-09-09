@@ -1,3 +1,8 @@
+---
+title: Developer API
+description: Introduction to the LuckPerms API.
+---
+
 ### Intro
 
 LuckPerms has a complete developer API, which allows other plugins on the server to read and modify LuckPerms data, and easily integrate LuckPerms deeply into existing plugins and systems.

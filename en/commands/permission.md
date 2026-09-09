@@ -1,4 +1,9 @@
-This is a sub-page of the main **Command Usage** page. [Click here to go back.](Command-Usage)
+---
+title: Permission commands
+description: Commands for permission nodes.
+---
+
+This is a sub-page of the main **Command Usage** page. [Click here to go back.](/wiki/commands)
 
 Key things to remember from the main page:
 
@@ -43,7 +48,7 @@ ___
 **Arguments**:  
 * `<node>` - the permission node to set
 * `[true|false]` - the value to set the permission to (defaults to `true`)
-* `[context...]` - the [contexts](Context) to set the permission in
+* `[context...]` - the [contexts](/wiki/features/context) to set the permission in
 
 Sets (or gives) a permission for a user/group with "true", granting the permission. Providing a value of "false" will negate the permission. Not adding any context will set the permission in context "global".
 
@@ -52,7 +57,7 @@ ___
 **Permission**: luckperms.user.permission.unset or luckperms.group.permission.unset  
 **Arguments**:  
 * `<node>` - the permission node to unset
-* `[context...]` - the [contexts](Context) to unset the permission in
+* `[context...]` - the [contexts](/wiki/features/context) to unset the permission in
 
 Unsets (or removes) a permission for a user/group.
 
@@ -64,7 +69,7 @@ ___
 * `<true|false>` - the value to set the permission to
 * `<duration>` - the duration until the permission will expire
 * `[temporary modifier]` - how the temporary permission should be applied
-* `[context...]` - the [contexts](Context) to set the permission in
+* `[context...]` - the [contexts](/wiki/features/context) to set the permission in
 
 Sets a permission temporarily for a user/group. Providing a value of "false" will negate the permission. Duration should either be a time period, or a unix timestamp when the permission will expire. e.g. "1mo3d13h45m" will set the permission to expire in 1 month, 3 days, 13 hours and 45 minutes time, while "1482694200" will set the permission to expire at 7:30PM on 25th December 2016.
 
@@ -82,7 +87,7 @@ ___
 **Arguments**:  
 * `<node>` - the permission node to unset
 * `[duration]` - the duration to subtract from the temporary permission, can be omitted to remove entirely
-* `[context...]` - the [contexts](Context) to unset the permission in
+* `[context...]` - the [contexts](/wiki/features/context) to unset the permission in
 
 Unsets a temporary permission for a user/group.
 
@@ -99,7 +104,7 @@ ___
 #### `/lp user/group <user|group> permission clear [context...]`  
 **Permission**: luckperms.user.permission.clear or luckperms.group.permission.clear  
 **Arguments**:  
-* `[context...]` - the [contexts](Context) to filter by
+* `[context...]` - the [contexts](/wiki/features/context) to filter by
 
 Removes all permissions from the user or group.
 

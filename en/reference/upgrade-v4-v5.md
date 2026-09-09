@@ -1,3 +1,8 @@
+---
+title: Upgrading from v4 to v5
+description: Breaking changes and upgrade notes.
+---
+
 The upgrade from LuckPerms v4 to LuckPerms v5 is fairly significant - most notably:
 
 * A new developer API has been implemented.
@@ -28,4 +33,4 @@ You have two options for fixing this:
 
 ### Other
 
-If you previously made use of "default assignments" (last section in the config file), you'll need to [install the `extension-default-assignments` extension](Extensions), and consider migrating away from the feature.
+If you previously made use of "default assignments" (last section in the config file), you'll need to [install the `extension-default-assignments` extension](/wiki/guides/extensions), and consider migrating away from the feature.

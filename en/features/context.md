@@ -1,3 +1,8 @@
+---
+title: Context
+description: World, server, and custom permission contexts.
+---
+
 Contexts are a fundamental part of the way LuckPerms works. They are probably the most important concept in the whole plugin, and are incredibly powerful when used correctly.
 
 ___

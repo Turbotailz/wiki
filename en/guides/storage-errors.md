@@ -1,4 +1,9 @@
-This page is an extension to the general [FAQ list](FAQ), with a focus on storage related issues and errors.
+---
+title: Storage system errors
+description: Diagnose and fix storage backend errors.
+---
+
+This page is an extension to the general [FAQ list](/wiki/faq), with a focus on storage related issues and errors.
 
 It includes a number of common errors & fixes for storage providers (mostly MySQL!).
 

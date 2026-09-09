@@ -1,3 +1,8 @@
+---
+title: Tracks
+description: Ordered promotion and demotion tracks.
+---
+
 LuckPerms has it's own (somewhat) unique track system, although the majority of other permissions plugins also have something similar. 
 
 Think of a Track as a "ladder" or "promotion route".

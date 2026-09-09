@@ -1,3 +1,8 @@
+---
+title: Migration
+description: Move to LuckPerms from another permissions plugin.
+---
+
 LuckPerms is able to automatically import permissions data from other plugins - we call this system "migration".
 
 ### Intro
@@ -5,7 +10,7 @@ It should be noted that these scripts are not perfect. They will do a pretty dec
 
 LuckPerms has some similarities with other permission plugins, however, some parts are fundamentally different, and therefore sometimes automatic migration is tricky.
 
-Additionally, letting the plugin migrate all of your data for you means you will not have a chance to learn any of the LuckPerms commands. This may become an issue later on. 😉 If you're migrating from PermissionsEx or GroupManager, you might [find this page useful](Migrating-from-GroupManager-or-PermissionsEx).
+Additionally, letting the plugin migrate all of your data for you means you will not have a chance to learn any of the LuckPerms commands. This may become an issue later on. 😉 If you're migrating from PermissionsEx or GroupManager, you might [find this page useful](/wiki/reference/migrating-gm-pex).
 
 If you have an old permissions setup, or a setup you're not completely happy with, now might be a great time to have a restructure and cleanup, and a chance to learn LuckPerms commands in the process!
 
@@ -27,11 +32,11 @@ The migration process is fairly simple, however it varies slightly for each plat
 
 #### Step 1: Install LuckPerms
 
-Firstly, you need to [install LuckPerms](Installation). Don't remove your old permissions plugin yet.
+Firstly, you need to [install LuckPerms](/wiki/install). Don't remove your old permissions plugin yet.
 
 Ensure that your old permissions plugin is still enabling properly. The migration process won't work if your old setup is broken.
 
-If you intend to change your data [storage type](Storage-types), for instance, to mysql, it is easiest to do this now. If you decide to change storage types after the migration, follow the instructions in [Switching Storage Types](Switching-storage-types).
+If you intend to change your data [storage type](/wiki/storage), for instance, to mysql, it is easiest to do this now. If you decide to change storage types after the migration, follow the instructions in [Switching Storage Types](/wiki/guides/switching-storage).
 
 #### Step 2: Install the correct migration plugin
 
@@ -58,4 +63,4 @@ Sit back, relax, and let LuckPerms handle the rest! You will be notified of the 
 
 When the process has finished, stop the server, remove the your old permissions plugin and the migration jar, then start your server again.
 
-If you're migrating from GroupManager or PermissionsEx, there are some additional resources [here](Migrating-from-GroupManager-or-PermissionsEx) which may be useful!
+If you're migrating from GroupManager or PermissionsEx, there are some additional resources [here](/wiki/reference/migrating-gm-pex) which may be useful!

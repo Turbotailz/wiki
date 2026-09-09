@@ -1,3 +1,8 @@
+---
+title: Standalone app and REST API
+description: Run LuckPerms as a standalone app with a REST API.
+---
+
 As well as running as a plugin or mod within a Minecraft server, LuckPerms can also be ran as a standalone app. This has two main (current) purposes:
 
 1. To enable server admins to quickly spin up a **LuckPerms CLI** and run commands against a remote database, without needing to start a Minecraft server too!
@@ -21,7 +26,7 @@ This will give you a CLI that you can use just like you would a Minecraft server
   <img src="../img/standalone-1.png" height="400"/>
 </p>
 
-You can configure your database host/user/password using [environment variables](Configuration#environment-variables).
+You can configure your database host/user/password using [environment variables](/wiki/configuration#environment-variables).
 
 You can also use Docker Compose. Create a file called `docker-compose.yml`:
 

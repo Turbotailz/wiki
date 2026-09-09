@@ -1,4 +1,9 @@
-This is a sub-page of the main **Command Usage** page. [Click here to go back.](Command-Usage)
+---
+title: General commands
+description: Plugin-wide LuckPerms commands.
+---
+
+This is a sub-page of the main **Command Usage** page. [Click here to go back.](/wiki/commands)
 
 Key things to remember from the main page:
 
@@ -77,7 +82,7 @@ Filters match the start of permissions or the user being checked. You can use `&
 * `anticheat & !anticheat.check` - matches any checks starting with "anticheat" but not starting with "anticheat.check"    
   
 
-More information can be found [**here**](Verbose)
+More information can be found [**here**](/wiki/features/verbose)
 
 ___
 #### `/lp verbose command <me|player> <command>`
@@ -160,7 +165,7 @@ ___
 * `[action value]` - the value to replace with. only required for update actions
 * `[constraints]` - the constraints required for the update
 
-Allows you to perform a bulk modification to all permission data. A detailed guide on how to use this command can be found [here](Bulk-Editing).
+Allows you to perform a bulk modification to all permission data. A detailed guide on how to use this command can be found [here](/wiki/guides/bulk-editing).
 
 ___
 #### `/lp translations`  

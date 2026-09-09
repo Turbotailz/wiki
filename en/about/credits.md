@@ -1,3 +1,8 @@
+---
+title: Credits
+description: People and projects behind LuckPerms.
+---
+
 LuckPerms is an open-source project, released freely under the terms of the permissive [MIT License](https://github.com/LuckPerms/LuckPerms/blob/master/LICENSE.txt).
 
 > MIT License
@@ -168,11 +173,11 @@ LuckPerms utilises a number of open source libraries and utilities to provide it
 ## Sponsors
 
 ### YourKit
-[![](../img/credits-yourkit.png)](https://www.yourkit.com/)
+[![](../../img/credits-yourkit.png)](https://www.yourkit.com/)
 
 YourKit supports open source projects with its full-featured Java Profiler. YourKit, LLC is the creator of [YourKit Java Profiler](https://www.yourkit.com/java/profiler/) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/), innovative and intelligent tools for profiling Java and .NET applications.
 
 ### JProfiler
-[![](../img/credits-jprofiler.png)](https://www.ej-technologies.com/products/jprofiler/overview.html)
+[![](../../img/credits-jprofiler.png)](https://www.ej-technologies.com/products/jprofiler/overview.html)
 
 Thanks to ej-technologies for granting LuckPerms an open source licence to their [Java Profiling Software](https://www.ej-technologies.com/products/jprofiler/overview.html "Java Profiler").

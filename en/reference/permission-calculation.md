@@ -1,3 +1,8 @@
+---
+title: How permission calculation works
+description: The LuckPerms permission calculation algorithm.
+---
+
 ## Intro
 Whilst the basics of LuckPerms are fairly simple, you can leverage a number of features and internal rules to setup an advanced permission system.
 

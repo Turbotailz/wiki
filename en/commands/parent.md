@@ -1,4 +1,9 @@
-This is a sub-page of the main **Command Usage** page. [Click here to go back.](Command-Usage)
+---
+title: Parent commands
+description: Commands for inheritance / parents.
+---
+
+This is a sub-page of the main **Command Usage** page. [Click here to go back.](/wiki/commands)
 
 Key things to remember from the main page:
 
@@ -46,7 +51,7 @@ ___
 **Permission**: luckperms.user.parent.set or luckperms.group.parent.set  
 **Arguments**:  
 * `<group>` - the group to set
-* `[context...]` - the [contexts](Context) to set the group in
+* `[context...]` - the [contexts](/wiki/features/context) to set the group in
 
 Sets a user/group's parent. Unlike the "parent add" command, this command will clear all existing groups set at the given context. The add command will simply "add" the group to the existing ones a user/group has. If the command is executed with no context arguments, this command will also update a user's primary group.
 
@@ -55,7 +60,7 @@ ___
 **Permission**: luckperms.user.parent.add or luckperms.group.parent.add  
 **Arguments**:  
 * `<group>` - the group to add
-* `[context...]` - the [contexts](Context) to add the group in
+* `[context...]` - the [contexts](/wiki/features/context) to add the group in
 
 Adds a parent to a user/group. Unlike the "parent set" command, this command will just accumulate the given parent with the ones the user/group already has. No existing parents will be removed from the user, and a user's primary group will be unaffected.
 
@@ -64,7 +69,7 @@ ___
 **Permission**: luckperms.user.parent.remove or luckperms.group.parent.remove  
 **Arguments**:  
 * `<group>` - the group to remove
-* `[context...]` - the [contexts](Context) to remove the group in
+* `[context...]` - the [contexts](/wiki/features/context) to remove the group in
 
 Removes a parent from the user/group.  
 If the removed group was the users primary group, will they be set back to default as primary.
@@ -75,7 +80,7 @@ ___
 **Arguments**:  
 * `<track>` - the track to set on
 * `<index|group>` - the group to set to, or an index number relating to the position of the group on the given track
-* `[context...]` - the [contexts](Context) to set the group in
+* `[context...]` - the [contexts](/wiki/features/context) to set the group in
 
 Sets a users/groups position on a given track. This behaves in the same way as the set command, except it only clears existing groups which are on the specified track. Other parent groups are not affected.
 ___
@@ -85,7 +90,7 @@ ___
 * `<group>` - the group to add
 * `<duration>` - the duration until the group will expire
 * `[temporary modifier]` - how the temporary permission should be applied
-* `[context...]` - the [contexts](Context) to add the group in
+* `[context...]` - the [contexts](/wiki/features/context) to add the group in
 
 Adds a parent to a user/group temporarily. Duration should either be a time period, or a unix timestamp when the permission will expire. e.g. "1mo3d13h45m" will set the permission to expire in 1 month, 3 days, 13 hours and 45 minutes time, while "1482694200" will set the permission to expire at 7:30PM on 25th December 2016.  
 
@@ -103,7 +108,7 @@ ___
 **Arguments**:  
 * `<group>` - the group to remove
 * `[duration]` - the duration to subtract from the temporary group membership, can be omitted to remove entirely
-* `[context...]` - the [contexts](Context) to remove the group in
+* `[context...]` - the [contexts](/wiki/features/context) to remove the group in
 
 Removes a temporary parent from the user/group.
 
@@ -111,7 +116,7 @@ ___
 #### `/lp user/group <user|group> parent clear [context...]`  
 **Permission**: luckperms.user.parent.clear or luckperms.group.parent.clear  
 **Arguments**:  
-* `[context...]` - the [contexts](Context) to filter by
+* `[context...]` - the [contexts](/wiki/features/context) to filter by
 
 Removes all parents the user or group has.  
 This will add them back to the `default` group.
@@ -121,7 +126,7 @@ ___
 **Permission**: luckperms.user.parent.cleartrack or luckperms.group.parent.cleartrack  
 **Arguments**:  
 * `<track>` - the track to remove on
-* `[context...]` - the [contexts](Context) to filter by
+* `[context...]` - the [contexts](/wiki/features/context) to filter by
 
 Removes all parents from the user/group on a given track.
 

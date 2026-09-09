@@ -1,3 +1,8 @@
+---
+title: Weight
+description: How group weight affects inheritance.
+---
+
 # Weights
 Weights are an integral part of the way LuckPerms operates, and are based on the premise of resolving conflict where it may appear.
 

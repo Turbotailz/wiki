@@ -1,3 +1,8 @@
+---
+title: Bulk editing
+description: Bulk-update permission data.
+---
+
 LuckPerms provides a command to help perform bulk permission modifications with ease. This command should be used with care, as it can easily corrupt or break your setup if used in the wrong way.
 
 It may be wise to take a backup of your permission data before using the command, either by making a copy of your database / files, or by using the export command.

@@ -1,3 +1,8 @@
+---
+title: Hytale
+description: LuckPerms on Hytale.
+---
+
 
 There is an **beta** version of **LuckPerms for [Hytale](https://hytale.com/)** available from our [downloads page](https://luckperms.net/download). This is the same LuckPerms you know and (maybe/hopefully) love from Minecraft, ported across and integrated with Hytale! 🎉
 
@@ -23,10 +28,10 @@ Hello and welcome! 👋
 
 The short answer is, check out the:
 
-* **[Installation](Installation)** page to learn how to install LuckPerms, then the
-* **[Getting Started](Usage)** page for how to start using it!
+* **[Installation](/wiki/install)** page to learn how to install LuckPerms, then the
+* **[Getting Started](/wiki/getting-started)** page for how to start using it!
 
-After that, if you've never used a permissions plugin before and want to find out more, we suggest you just start at the top and work your way down! A more to the point command reference can be found in the [Command Usage](Command-Usage) subpages.
+After that, if you've never used a permissions plugin before and want to find out more, we suggest you just start at the top and work your way down! A more to the point command reference can be found in the [Command Usage](/wiki/commands) subpages.
 
 ### OP doesn't work anymore!
 
@@ -51,7 +56,7 @@ By default, LuckPerms will delegate permission checks for non-Player entities to
 
 ### Finding permissions and troubleshooting
 
-If you don't know the permissions associated with a given command or feature, use the LuckPerms verbose feature! See the [Verbose](Verbose) wiki page for details.
+If you don't know the permissions associated with a given command or feature, use the LuckPerms verbose feature! See the [Verbose](/wiki/features/verbose) wiki page for details.
 
 You can also use the built-in `/help` command, which will bring up a UI listing available commands and their corresponding permissions.
 
@@ -88,7 +93,7 @@ Some examples:
 Hopefully you get the idea. For more information:
 
 * [mini-chat-formatter](https://github.com/lucko/mini-chat-formatter) (GitHub)
-* [Prefixes, Suffixes & Meta](Prefixes,-Suffixes-&-Meta) (LP wiki)
+* [Prefixes, Suffixes & Meta](/wiki/features/prefixes-suffixes-meta) (LP wiki)
 * [MiniMessage format](https://docs.papermc.io/adventure/minimessage/format/) (PaperMC docs)
 
 #### Advanced chat formatting options

@@ -1,3 +1,8 @@
+---
+title: Prefix and suffix stacking
+description: Stack multiple prefixes and suffixes.
+---
+
 ### What does it do?
 The "meta stacking" feature allows you to display multiple prefixes or suffixes alongside a players username in chat.
 

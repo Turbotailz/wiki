@@ -1,6 +1,11 @@
+---
+title: Prefixes, suffixes and meta
+description: Chat prefixes, suffixes, and extra metadata.
+---
+
 This guide covers how to setup and manage prefixes, suffixes and meta with LuckPerms.
 
-If you are already familiar with these concepts, and just want to view how the commands work, then you should read the [Command Usage: Meta](Meta-Commands) page.
+If you are already familiar with these concepts, and just want to view how the commands work, then you should read the [Command Usage: Meta](/wiki/commands/meta) page.
 
 # Key Definitions
 ### Prefix / Suffix
@@ -63,7 +68,7 @@ This would remove all prefixes set to admin with a weight of 100. I could then r
 
 The command usage for setting prefixes/suffixes temporarily follows the same format as the commands for adding temporary permissions, or parent groups.
 
-The full command usages can be found [**here**](Meta-Commands). The commands for adding and removing meta are also documented there.
+The full command usages can be found [**here**](/wiki/commands/meta). The commands for adding and removing meta are also documented there.
 
 ## How do I see the prefixes/suffixes a user or group has
 The easiest way to debug issues with prefixes/suffixes is to use the info command.

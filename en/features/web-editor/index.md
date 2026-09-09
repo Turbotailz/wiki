@@ -1,6 +1,11 @@
+---
+title: Web editor
+description: Edit permissions in the browser, then apply with a command.
+---
+
 LuckPerms features a web editor, which allows you to make changes to permissions data using a friendly interface in your web browser. It is safe, secure and easy to use. You don't need to host the page yourself - and it works for all storage types!
 
-If you'd like more information about the technical details, please see the [technical info page](Web-Editor-Technical-Details).
+If you'd like more information about the technical details, please see the [technical info page](/wiki/features/web-editor/technical).
 
 ___
 

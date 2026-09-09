@@ -1,3 +1,8 @@
+---
+title: Web editor technical details
+description: Bytebin, bytesocks, and the signed WebSocket protocol.
+---
+
 The LuckPerms Web Editor is a special application that runs in a web browser, and allows server admins to edit permissions with an easy to use interface.
 
 User-facing documentation can be found on the [Web Editor](#Web-Editor) page. This page focuses on technical information.

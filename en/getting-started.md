@@ -1,3 +1,8 @@
+---
+title: Getting started
+description: Learn the basics of groups, users, and permissions.
+---
+
 ### Contents
 * [Key Concepts](#key-concepts)
 * [Getting Started](#getting-started)
@@ -9,7 +14,7 @@
   * [Finding Permissions](#finding-permissions)
   * [Web Editor](#web-editor)
 
-If you're already familiar with what LuckPerms is and what it does, then feel free to skip directly to the [Command Usage and Permissions](Command-Usage) section, which is more of a quick reference.
+If you're already familiar with what LuckPerms is and what it does, then feel free to skip directly to the [Command Usage and Permissions](/wiki/commands) section, which is more of a quick reference.
 
 Otherwise, read on! To start with, let's go over some key concepts...
 
@@ -47,12 +52,12 @@ A term that you will encounter quite often with LuckPerms is "context".
 
 **Context** in the most basic sense simply means the **circumstances where something will apply**. For example, contexts allow you to grant users or groups permisions that only apply in certain servers, worlds, gamemodes, etc.
 
-Contexts are such a fundamental part of the plugin, they have their [very own wiki page](Context) dedicated to explaining their use. :)
+Contexts are such a fundamental part of the plugin, they have their [very own wiki page](/wiki/features/context) dedicated to explaining their use. :)
 
 # Getting Started
-If you haven't got LuckPerms installed just yet, please refer to the [installation guide](Installation) first.
+If you haven't got LuckPerms installed just yet, please refer to the [installation guide](/wiki/install) first.
 
-Then, please make sure you read the section about [choosing a Storage type](Storage-types) before proceeding. Whilst it is possible to change these options later, it's better to get them right the first time around.
+Then, please make sure you read the section about [choosing a Storage type](/wiki/storage) before proceeding. Whilst it is possible to change these options later, it's better to get them right the first time around.
 
 ## Granting full access to LuckPerms
 The first thing you'll want to do is give yourself full access to the plugin. When LuckPerms is first installed, nobody has access to any of the LP commands.
@@ -152,13 +157,13 @@ There's a couple of ways to find out what these are:
 
 * Look at **documentation** for your game server software
 * Look at **documentation** for your other plugins/mods
-* Use the **[`/lp verbose`](Verbose)** command!
+* Use the **[`/lp verbose`](/wiki/features/verbose)** command!
 * Use **auto-complete** (either in commands or web editor)
     * Note: The auto-complete list is not exhaustive! It is just the permissions LuckPerms has "seen" since the server started. If a permission isn't listed, you can still use it.
 
 ### Verbose command
 
-The [Verbose](Verbose) command allows you (as the server admin) to monitor permission checks occurring in real time! This is the most reliable way to find permissions (and figure out why they aren't working as intended).
+The [Verbose](/wiki/features/verbose) command allows you (as the server admin) to monitor permission checks occurring in real time! This is the most reliable way to find permissions (and figure out why they aren't working as intended).
 
 Simplest usage:
 
@@ -173,14 +178,14 @@ Example:
 
 You can also use `/lp verbose on <test user>` to simply print the output to the chat/console, and `/lp verbose off` to turn it off after you're done. 
 
-More advanced usage is documented on the Verbose [wiki page](Verbose).
+More advanced usage is documented on the Verbose [wiki page](/wiki/features/verbose).
 
 ## Web Editor
 
-Are commands too much typing for you?! LuckPerms has a fancy online [Web Editor](Web-Editor) which allows you to edit your permissions setup easily in an interactive web page.
+Are commands too much typing for you?! LuckPerms has a fancy online [Web Editor](/wiki/features/web-editor) which allows you to edit your permissions setup easily in an interactive web page.
 
 Just run `/lp editor` and follow the link to get started.
 
 ![](../img/whyluckperms-1.png)
 
-More information can be found on this [wiki page](Web-Editor).
+More information can be found on this [wiki page](/wiki/features/web-editor).

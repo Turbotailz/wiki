@@ -1,4 +1,9 @@
-This is a sub-page of the main **Command Usage** page. [Click here to go back.](Command-Usage)
+---
+title: Group commands
+description: Commands for managing groups.
+---
+
+This is a sub-page of the main **Command Usage** page. [Click here to go back.](/wiki/commands)
 
 Key things to remember from the main page:
 
@@ -12,9 +17,9 @@ ___
 
 ### Index
 *  [/lp group \<group\> `info`](#lp-group-group-info)
-*  [/lp group \<group\> `permission`](Permission-Commands)
-*  [/lp group \<group\> `parent`](Parent-Commands)
-*  [/lp group \<group\> `meta`](Meta-Commands)
+*  [/lp group \<group\> `permission`](/wiki/commands/permission)
+*  [/lp group \<group\> `parent`](/wiki/commands/parent)
+*  [/lp group \<group\> `meta`](/wiki/commands/meta)
 *  [/lp group \<group\> `editor`](#lp-group-group-editor)
 *  [/lp group \<group\> `listmembers` [page]](#lp-group-group-listmembers-page)
 *  [/lp group \<group\> `setweight` \<weight\>](#lp-group-group-setweight-weight)
@@ -55,7 +60,7 @@ ___
 **Permission**: luckperms.group.setdisplayname  
 **Arguments**:  
 * `<name>` - the name to set
-* `[context...]` - the [contexts](Context) to set the display name in
+* `[context...]` - the [contexts](/wiki/features/context) to set the display name in
 
 Sets the groups display name. This can effectively be used as an "alias" for the group.
 
@@ -68,7 +73,7 @@ ___
 #### `/lp group <group> clear [context]`  
 **Permission**: luckperms.group.clear  
 **Arguments**:  
-* `[context...]` - the [contexts](Context) to filter by
+* `[context...]` - the [contexts](/wiki/features/context) to filter by
 
 Clears the group's permissions, parent groups and meta.
 

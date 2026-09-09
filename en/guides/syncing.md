@@ -1,9 +1,14 @@
+---
+title: Syncing data between servers
+description: Keep permission data in sync on a network.
+---
+
 Data can be synchronised between different servers with ease.
 
 ## Requirements
 For data to sync, you **must** be using a remote storage type. All of your servers need to be connected to the same database.
 
-See the page for [Storage types](Storage-types) for more information. You need to use one of the "**remote databases**" listed on that page.
+See the page for [Storage types](/wiki/storage) for more information. You need to use one of the "**remote databases**" listed on that page.
 
 ## Instantly propagating updates
 Simply connecting the servers to the same database isn't enough for data to be synced instantly between them. LuckPerms needs to know that data has changed in order to update it.

@@ -1,3 +1,8 @@
+---
+title: Extensions
+description: Optional LuckPerms extensions.
+---
+
 Extensions are a way to "bolt on" additional functionality to the plugin. Extensions work independently of the platform LuckPerms is running on (i.e. Bukkit, Sponge, etc) and can therefore be installed in the same way on all platforms. They use the native API provided by the plugin.
 
 They're essentially "plugins for a plugin" - a bit confusing, and maybe overkill - but it seems to be a good solution to me!
@@ -19,7 +24,7 @@ ___
 
 ### REST API
 
-See [here](Standalone-and-REST-API) for info. :)
+See [here](/wiki/developers/standalone-rest) for info. :)
 
 ### Deprecated extensions
 

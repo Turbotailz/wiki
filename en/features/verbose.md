@@ -1,3 +1,8 @@
+---
+title: Verbose
+description: Record and inspect permission checks.
+---
+
 Ever been in a situation where you need to find a permission for a certain command or feature, but can't find any documentation for it?
 
 Maybe the documentation is outdated, or just doesn't contain the right info. Perhaps you want to debug an issue with players not having the right permissions, or are just interested in what plugins are checking for.

@@ -1,3 +1,8 @@
+---
+title: Contributing
+description: How to contribute to LuckPerms.
+---
+
 Hello!
 
 The purpose of this guide is to help developers get setup and working on the LuckPerms codebase.

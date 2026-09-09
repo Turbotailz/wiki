@@ -1,3 +1,8 @@
+---
+title: Installation
+description: Install LuckPerms on a single Minecraft server.
+---
+
 ## Step 1: Download the LuckPerms jar file
 
 The first thing you will need to do is download LuckPerms. You can always find the latest versions of LuckPerms for all of the platforms we support on our [downloads page](https://luckperms.net/download).
@@ -36,7 +41,7 @@ When your server starts back up, LuckPerms will enable and generate the default 
 
 ![](../img/installation-4.png)
 
-LuckPerms is now installed and you can start using it right away! Move onto the [Getting Started](Usage) section of the wiki for more information about what to do next!
+LuckPerms is now installed and you can start using it right away! Move onto the [Getting Started](/wiki/getting-started) section of the wiki for more information about what to do next!
 
 ## Step 4: Configure LuckPerms
 
@@ -107,7 +112,7 @@ Some platforms / Minecraft releases necessitate even new versions of Java (e.g. 
 
 ---
 ### Internet Connection
-LuckPerms uses a number of [external libraries](External-connections), some of which are [downloaded automatically at runtime](External-connections#downloading-libraries).
+LuckPerms uses a number of [external libraries](/wiki/about/external-connections), some of which are [downloaded automatically at runtime](/wiki/about/external-connections#downloading-libraries).
 
 If your server does not have an internet connection, you can install LP locally (where you do have an internet connection), and then copy the content of the `/LuckPerms/libs/` directory to your other server.
 
