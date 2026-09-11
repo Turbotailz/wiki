@@ -13,22 +13,7 @@ Key things to remember from the main page:
 * Optional arguments are marked with square brackets - e.g. `[optional]`
 * If you want to include spaces in arguments, you must escape the argument with quotes - e.g. `"  "`
 
-___
-
-### Index
-*  [`info`](#lp-usergroup-usergroup-parent-info-page-sorting-mode)
-*  [`set` \<group\> [context...]](#lp-usergroup-usergroup-parent-set-group-context)
-*  [`add` \<group\> [context...]](#lp-usergroup-usergroup-parent-add-group-context)
-*  [`remove` \<group\> [context...]](#lp-usergroup-usergroup-parent-remove-group-context)
-*  [`settrack` \<track\> \<index | group\> [context...]](#lp-usergroup-usergroup-parent-settrack-track-indexgroup-context)
-*  [`addtemp` \<group\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-parent-addtemp-group-duration-temporary-modifier-context)
-*  [`removetemp` \<group\> [duration] [context...]](#lp-usergroup-usergroup-parent-removetemp-group-duration-context)
-*  [`clear` [context...]](#lp-usergroup-usergroup-parent-clear-context)
-*  [`cleartrack` \<track\> [context...]](#lp-usergroup-usergroup-parent-cleartrack-track-context)
-*  [`switchprimarygroup` \<group\>](#lp-user-user-parent-switchprimarygroup-group)
-
-___
-#### `/lp user/group <user|group> parent info [page] [sorting mode]`  
+## `/lp user/group <user|group> parent info [page] [sorting mode]`
 **Permission**: luckperms.user.parent.info or luckperms.group.parent.info  
 **Arguments**:  
 * `[page]` - the page number to view
@@ -47,7 +32,7 @@ The "sorting mode" argument allows you to specify how the list will be sorted. Y
 | `!abc`/`!alphabetically` | The list will be sorted alphabetically and then reversed (Z - A)         |
 
 ___
-#### `/lp user/group <user|group> parent set <group> [context...]`  
+## `/lp user/group <user|group> parent set <group> [context...]`
 **Permission**: luckperms.user.parent.set or luckperms.group.parent.set  
 **Arguments**:  
 * `<group>` - the group to set
@@ -56,7 +41,7 @@ ___
 Sets a user/group's parent. Unlike the "parent add" command, this command will clear all existing groups set at the given context. The add command will simply "add" the group to the existing ones a user/group has. If the command is executed with no context arguments, this command will also update a user's primary group.
 
 ___
-#### `/lp user/group <user|group> parent add <group> [context...]`  
+## `/lp user/group <user|group> parent add <group> [context...]`
 **Permission**: luckperms.user.parent.add or luckperms.group.parent.add  
 **Arguments**:  
 * `<group>` - the group to add
@@ -65,7 +50,7 @@ ___
 Adds a parent to a user/group. Unlike the "parent set" command, this command will just accumulate the given parent with the ones the user/group already has. No existing parents will be removed from the user, and a user's primary group will be unaffected.
 
 ___
-#### `/lp user/group <user|group> parent remove <group> [context...]`  
+## `/lp user/group <user|group> parent remove <group> [context...]`
 **Permission**: luckperms.user.parent.remove or luckperms.group.parent.remove  
 **Arguments**:  
 * `<group>` - the group to remove
@@ -75,7 +60,7 @@ Removes a parent from the user/group.
 If the removed group was the users primary group, will they be set back to default as primary.
 
 ___
-#### `/lp user/group <user|group> parent settrack <track> <index|group> [context...]`  
+## `/lp user/group <user|group> parent settrack <track> <index|group> [context...]`
 **Permission**: luckperms.user.parent.settrack or luckperms.group.parent.settrack  
 **Arguments**:  
 * `<track>` - the track to set on
@@ -84,7 +69,7 @@ ___
 
 Sets a users/groups position on a given track. This behaves in the same way as the set command, except it only clears existing groups which are on the specified track. Other parent groups are not affected.
 ___
-#### `/lp user/group <user|group> parent addtemp <group> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> parent addtemp <group> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.parent.addtemp or luckperms.group.parent.addtemp  
 **Arguments**:  
 * `<group>` - the group to add
@@ -103,7 +88,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> parent removetemp <group> [duration] [context...]`  
+## `/lp user/group <user|group> parent removetemp <group> [duration] [context...]`
 **Permission**: luckperms.user.parent.removetemp or luckperms.group.parent.removetemp  
 **Arguments**:  
 * `<group>` - the group to remove
@@ -113,7 +98,7 @@ ___
 Removes a temporary parent from the user/group.
 
 ___
-#### `/lp user/group <user|group> parent clear [context...]`  
+## `/lp user/group <user|group> parent clear [context...]`
 **Permission**: luckperms.user.parent.clear or luckperms.group.parent.clear  
 **Arguments**:  
 * `[context...]` - the [contexts](/wiki/features/context) to filter by
@@ -122,7 +107,7 @@ Removes all parents the user or group has.
 This will add them back to the `default` group.
 
 ___
-#### `/lp user/group <user|group> parent cleartrack <track> [context...]`  
+## `/lp user/group <user|group> parent cleartrack <track> [context...]`
 **Permission**: luckperms.user.parent.cleartrack or luckperms.group.parent.cleartrack  
 **Arguments**:  
 * `<track>` - the track to remove on
@@ -131,7 +116,7 @@ ___
 Removes all parents from the user/group on a given track.
 
 ___
-#### `/lp user <user> parent switchprimarygroup <group>`  
+## `/lp user <user> parent switchprimarygroup <group>`
 **Permission**: luckperms.user.parent.switchprimarygroup  
 **Arguments**:  
 * `<group>` - the group to switch to

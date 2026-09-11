@@ -3,7 +3,7 @@ title: Locale and translations
 description: In-game translations via Crowdin.
 ---
 
-### Overview
+## Overview
 
 All in-game messages in LuckPerms can be customised and translated using the translation system.
 

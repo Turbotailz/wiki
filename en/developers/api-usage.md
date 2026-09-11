@@ -7,39 +7,7 @@ This page shows some sample usages of the LuckPerms API, which is introduced [he
 
 As well as this documentation, we also have the [api-cookbook](https://github.com/LuckPerms/api-cookbook). This is an example Bukkit plugin which uses the API to perform certain common functions.
 
-___
-
-### Index
-
-* [Player group membership check](#checking-if-a-player-is-in-a-group)
-* [Player group membership lookup](#finding-a-players-group)
-* [Getting a LuckPerms `User` object](#obtaining-a-user-instance)
-  * [Distinction between online & offline players](#distinction-between-online--offline-players)
-  * [Loading data for players](#loading-data-for-players)
-* [Getting a LuckPerms `Group` or `Track` object](#obtaining-a-grouptrack-instance)
-* [Saving changes](#saving-changes)
-* [The `Node` object](#the-basics-of-node)
-  * [Creating new nodes](#creating-new-node-instances)
-  * [Modifying existing nodes](/wiki/developers/api-usage#modifying-existing-nodes)
-* [Reading user/group data](#reading-usergroup-data)
-* [Modifying user/group data](#modifying-usergroup-data)
-* [Context](#the-basics-of-context)
-  * [Important classes](#important-classes)
-  * [Registering ContextCalculators](#registering-contextcalculators)
-  * [Querying active contexts/query options](#querying-active-contextsquery-options)
-* [CachedData](#the-basics-of-cacheddata)
-  * [Performing permission checks](#performing-permission-checks)
-  * [Getting prefixes and suffixes](#retrieving-prefixessuffixes)
-  * [Getting metadata](#retrieving-metadata)
-* [Store and query custom metadata](#store-and-query-custom-metadata)
-* [Events](#events)
-  * [Event listeners](#event-listeners)
-  * [Listening for changes to user cached data](#listening-for-changes-to-user-cached-data)
-  * [Listening for changes to permissions/parent groups/etc](#listening-for-changes-to-permissionsparent-groupsetc)
-
-___
-
-### Checking if a player is in a group
+## Checking if a player is in a group
 
 Checking for group membership can be most easily achieved using hasPermission checks.
 
@@ -53,7 +21,7 @@ However, keep in mind that anyone with server operator status or `*` permissions
 
 ___
 
-### Finding a players group
+## Finding a players group
 
 We can use the method above with a list of "possible" groups in order to find a player's group.
 
@@ -72,11 +40,11 @@ Remember to order your `possibleGroups` list by priority. e.g. owner first, memb
 
 ___
 
-### Obtaining a User instance
+## Obtaining a User instance
 
 A `User` in LuckPerms is simply an object which represents a player on the server, and their associated permission data.
 
-#### Distinction between online & offline players
+### Distinction between online & offline players
 
 In order to conserve memory usage, LuckPerms will only load User data when it absolutely needs to. 
 
@@ -87,9 +55,9 @@ Meaning:
 
 This makes getting a User instance a little complicated, depending on if the Player is online or not.
 
-#### Loading data for players
+### Loading data for players
 
-##### If the player is already online
+#### If the player is already online
 
 If we know the player is connected, LuckPerms will already have data in memory for them.
 
@@ -108,7 +76,7 @@ User user = luckPerms.getUserManager().getUser(uuid);
 
 However, remember that this instance *may* not represent the user's most up-to-date state. If you want to make changes, it's a good idea to request for the user's data to be loaded again (read on...).
 
-##### If the player isn't (or might not be) online
+#### If the player isn't (or might not be) online
 
 Let's assume we want to load some data about a user - but we only have their unique id.
 
@@ -128,7 +96,7 @@ userFuture.thenAcceptAsync(user -> {
 });
 ```
 
-##### If the player isn't (or might not be) online & we want to return something
+#### If the player isn't (or might not be) online & we want to return something
 
 The callback approach works well if you don't need to actually "return" anything. It performs all of the nasty i/o away from the main server thread, and handles everything in the background.
 
@@ -208,7 +176,7 @@ To summarise, there are two ways to obtain a user.
 
 ___
 
-### Obtaining a Group/Track instance
+## Obtaining a Group/Track instance
 
 Grabbing a `Group` or `Track` is much more simple, as they are always kept loaded in memory.
 
@@ -231,7 +199,7 @@ If you need to get up-to-date data (a good idea if you're making changes), then 
 
 ___
 
-### Saving changes
+## Saving changes
 
 After making changes to a user/group/track, you have to save the changes back to the storage provider. It's pretty easy.
 
@@ -261,7 +229,7 @@ The same methods also exist for groups and tracks.
 
 ___
 
-### The basics of Node
+## The basics of Node
 
 The `Node` interface is the core data class in LuckPerms.
 
@@ -291,7 +259,7 @@ There are a number of node types, all of which are extensions of the base `Node`
 
 ___
 
-### Creating new node instances
+## Creating new node instances
 
 To obtain a `Node`, you use `NodeBuilder`s.
 
@@ -337,7 +305,7 @@ DisplayNameNode node = DisplayNameNode.builder("SeniorModerator").build();
 
 ___
 
-### Modifying existing nodes
+## Modifying existing nodes
 
 `Node`s are immutable - meaning their attributes cannot be changed. However, we can easily create a *new* node based upon the properties of an existing one.
 
@@ -349,7 +317,7 @@ Node negated = node.toBuilder().value(false).build();
 
 ___
 
-### Reading user/group data
+## Reading user/group data
 
 `User`s and `Group`s both inherit from a super interface called `PermissionHolder`. This interface defines most of the shared permission functionality in users and groups.
 
@@ -357,7 +325,7 @@ As explained above, most data held by users/groups are contained within `Node` i
 
 Importantly, all of the methods below return **immutable collections**. You cannot make changes to the returned connections. 
 
-#### `.getNodes()`
+### `.getNodes()`
 
 The method signature is:
 
@@ -403,7 +371,7 @@ int maxWeight = user.getNodes(NodeType.PREFIX).stream()
 
 If you need to do a more specific lookup or check, prefer using one of the other methods (described later) to avoid iterating over the whole collection of nodes.
 
-#### `.getDistinctNodes()`
+### `.getDistinctNodes()`
 
 The method signature is:
 
@@ -415,7 +383,7 @@ SortedSet<Node> getDistinctNodes();
 * The nodes are sorted according to "priority order". As the returned type is a set, duplicate elements may be missing.
 * This view does **not** consider inherited data.
 
-#### `.resolveInheritedNodes()`
+### `.resolveInheritedNodes()`
 
 The method signature is:
 
@@ -431,7 +399,7 @@ The `QueryOptions` parameter encapsulates the lookup settings for the query. Thi
 
 ___
 
-### Modifying user/group data
+## Modifying user/group data
 
 User/group data can be modified by adding and removing `Node`s from the holders data. This can be done by calling `#data` and calling the methods on the returned `NodeMap`.
 
@@ -443,7 +411,7 @@ Don't forget to [save](#saving-changes) your changes!
 
 ___
 
-### The basics of Context
+## The basics of Context
 
 Contexts are an important concept in LuckPerms, and are introduced [here](/wiki/features/context). They are encapsulated within the API by a few important classes.
 
@@ -457,9 +425,9 @@ A very basic overview is that:
 >
 > Context keys are case-insensitive, and will be converted to lowercase by all implementations. Values however are case-sensitive. Context keys and values may not be null or empty. A key/value will be deemed empty if it's length is zero, or if it consists of only space characters.
 
-#### Important classes
+### Important classes
 
-#### `ContextSet`
+### `ContextSet`
 
 A "context set" is simply a set of contexts.
 
@@ -469,7 +437,7 @@ Keys can be mapped to multiple values.
 
 The `ContextSet` interface defines a number of methods which can be used to interact with context set implementations. These methods should be fairly self explanatory - and are sufficiently explained in the Javadocs.
 
-#### `ImmutableContextSet`
+### `ImmutableContextSet`
 
 An *immutable* implementation of ContextSet. You can obtain an instance in a number of ways.
 
@@ -501,7 +469,7 @@ set.add("something", "something");
 ImmutableContextSet immutableSet = set.immutableCopy();
 ```
 
-#### `MutableContextSet`
+### `MutableContextSet`
 
 A *mutable* implementation of ContextSet. You can obtain an instance in a number of ways.
 
@@ -529,7 +497,7 @@ MutableContextSet mutableCopy = set.mutableCopy();
 mutableCopy.add("something", "something-else");
 ```
 
-#### Registering ContextCalculators
+### Registering ContextCalculators
 
 A "subject" (a player in most cases) is just an object which can have contexts applied to them.
 
@@ -578,7 +546,7 @@ Then register it using
 luckPerms.getContextManager().registerCalculator(new CustomCalculator());
 ```
 
-#### Querying active contexts/query options
+### Querying active contexts/query options
 
 You can query the "active" contexts/query options of a Subject using the `ContextManager`.
 
@@ -615,7 +583,7 @@ QueryOptions queryOptions = cm.getQueryOptions(user).orElse(cm.getStaticQueryOpt
 
 ___
 
-### The basics of CachedData
+## The basics of CachedData
 
 All `User`s and `Group`s also have an extra object attached to them called `CachedData`. This is the name of the caching class used by LuckPerms to store easily query-able data for all permission holders. The lookup methods provided by this class are very fast. If you're doing frequent data lookups, it is highly recommended that you use `CachedData` over the methods in `User` and `Group`.
 
@@ -626,7 +594,7 @@ The contained data is split into two separate sections: `CachedPermissionData` a
 * `CachedPermissionData` contains the user/groups fully resolved map of permissions, and allows you to run permission checks in exactly the same way as you would using the Player class provided by the platform.
 * `CachedMetaData` contains information about a user/groups prefixes, suffixes, and meta values.
 
-#### Obtaining `CachedPermissionData` and `CachedMetaData`
+### Obtaining `CachedPermissionData` and `CachedMetaData`
 
 You need either:
 
@@ -656,7 +624,7 @@ CachedMetaData metaData = user.getCachedData().getMetaData(queryOptions);
 
 Once you have a cached data instance, you can perform lots of different queries.
 
-#### Performing permission checks
+### Performing permission checks
 
 ```java
 // run a permission check!
@@ -674,14 +642,14 @@ public boolean hasPermission(User user, String permission) {
 }
 ```
 
-#### Retrieving prefixes/suffixes
+### Retrieving prefixes/suffixes
 
 ```java
 String prefix = user.getCachedData().getMetaData().getPrefix();
 String suffix = user.getCachedData().getMetaData().getSuffix();
 ```
 
-#### Retrieving metadata
+### Retrieving metadata
 
 ```java
 String metaValue = user.getCachedData().getMetaData().getMetaValue("some-key");
@@ -691,11 +659,11 @@ These methods work with `Group`s too!
 
 ___
 
-### Store and query custom metadata
+## Store and query custom metadata
 
 The metadata stored by LuckPerms isn't limited to only a few types. You use the API to easily store any sort of data about players, whilst also taking advantage of the storage / caching systems built into LP.
 
-#### Setting metadata
+### Setting metadata
 
 You can set metadata by creating & adding a `MetaNode` to a user.
 
@@ -720,7 +688,7 @@ public void setLevel(Player player, int level) {
 }
 ```
 
-#### Querying metadata
+### Querying metadata
 
 Once the metadata is set, querying it is easy!
 
@@ -737,13 +705,13 @@ public int getLevel(Player player) {
 
 ___
 
-### Events
+## Events
 
 LuckPerms uses it's own event system, completely separate from the event systems used by platforms (e.g. Bukkit or Sponge). This means that instead of registering your listener with the server, you must register it directly with LuckPerms.
 
 The events supported by LuckPerms are defined as `interface`s that extend from [`LuckPermsEvent`](https://github.com/LuckPerms/LuckPerms/blob/master/api/src/main/java/net/luckperms/api/event/LuckPermsEvent.java). They can be found in the [`net.luckperms.api.event`](https://github.com/LuckPerms/LuckPerms/tree/master/api/src/main/java/net/luckperms/api/event) package.
 
-#### Event listeners
+### Event listeners
 
 To listen to events, you first need to obtain the [`EventBus`](https://github.com/LuckPerms/LuckPerms/blob/master/api/src/main/java/net/luckperms/api/event/EventBus.java) instance using `LuckPerms#getEventBus`, then register each listener using the `subscribe` method.
 
@@ -789,13 +757,13 @@ public class MyListener {
 
 If your listener is simple, then an expression or statement lambda is best. If your listener is complex, then method references are probably going to be more organised.
 
-#### Listening for changes to user cached data
+### Listening for changes to user cached data
 
 If you have a system that depends on a users cached data (e.g. their prefix or permission state), then you may find it necessary to perform some action in your plugin when the data changes (e.g. invalidate or update a cache). The best & most simple event to use to achieve this is the [`UserDataRecalculateEvent`](https://github.com/LuckPerms/LuckPerms/blob/master/api/src/main/java/net/luckperms/api/event/user/UserDataRecalculateEvent.java).
 
 This is a simple event that is "called when a User's cached data is refreshed". It doesn't give any information about what caused the refresh - just that it happened!
 
-#### Listening for changes to permissions/parent groups/etc
+### Listening for changes to permissions/parent groups/etc
 
 Recall from earlier that [all user/group data is stored as `Node`s](#the-basics-of-node) - introducing:
 

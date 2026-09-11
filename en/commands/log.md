@@ -13,18 +13,7 @@ Key things to remember from the main page:
 * Optional arguments are marked with square brackets - e.g. `[optional]`
 * If you want to include spaces in arguments, you must escape the argument with quotes - e.g. `"  "`
 
-___
-
-### Index
-*  [/lp log `recent` [user] [page]](#lp-log-recent-user-page)
-*  [/lp log `search` \<query\> [page]](#lp-log-search-query-page)
-*  [/lp log `notify` [on|off]](#lp-log-notify-onoff)
-*  [/lp log `userhistory` \<user\> [page]](#lp-log-userhistory-user-page)
-*  [/lp log `grouphistory` \<group\> [page]](#lp-log-grouphistory-group-page)
-*  [/lp log `trackhistory` \<track\> [page]](#lp-log-trackhistory-track-page)
-
-___
-#### `/lp log recent [user] [page]`  
+## `/lp log recent [user] [page]`
 **Permission**: luckperms.log.recent  
 **Arguments**:  
 * `[user]` - the name/uuid of the user to filter by
@@ -33,7 +22,7 @@ ___
 Shows a list of recent actions.
 
 ___
-#### `/lp log search <query> [page]`  
+## `/lp log search <query> [page]`
 **Permission**: luckperms.log.search  
 **Arguments**:  
 * `<query>` - the query to search for
@@ -42,7 +31,7 @@ ___
 Searches for log entries matching the given query.
 
 ___
-#### `/lp log notify [on|off]`  
+## `/lp log notify [on|off]`
 **Permission**: luckperms.log.notify  
 **Arguments**:  
 * `[on|off]` - whether to enable or disable
@@ -50,7 +39,7 @@ ___
 Toggles log notifications for the sender executing the command.
 
 ___
-#### `/lp log userhistory <user> [page]`  
+## `/lp log userhistory <user> [page]`
 **Permission**: luckperms.log.userhistory  
 **Arguments**:  
 * `<user>` - the user to search for
@@ -59,7 +48,7 @@ ___
 Searches for log entries acting upon the given user.
 
 ___
-#### `/lp log grouphistory <group> [page]`  
+## `/lp log grouphistory <group> [page]`
 **Permission**: luckperms.log.grouphistory  
 **Arguments**:  
 * `<group>` - the group to search for
@@ -68,7 +57,7 @@ ___
 Searches for log entries acting upon the given group.
 
 ___
-#### `/lp log trackhistory <track> [page]`  
+## `/lp log trackhistory <track> [page]`
 **Permission**: luckperms.log.trackhistory  
 **Arguments**:  
 * `<track>` - the track to search for

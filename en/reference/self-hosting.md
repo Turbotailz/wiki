@@ -22,7 +22,7 @@ etc. and all of the fun things that go along with the above, like: patching, mai
 
 ___
 
-### Deploy LuckPermsWeb stack on a server
+## Deploy LuckPermsWeb stack on a server
 
 On a server:
 
@@ -37,7 +37,7 @@ will expose the interface on port `8080`.
 At this point, you should be able to access the UI at `http://<your server ip>:8080/` - but this isn't very secure, so the next step is probably to put this app behind a reverse proxy (e.g. NGINX), then configure a domain + DNS, then TLS certificates. All of this is beyond the scope of this guide.
 
 
-### Configuring the plugin to use your custom stack
+## Configuring the plugin to use your custom stack
 
 Assuming, for example, your stack is hosted and available at `https://luckperms.yourdomain.com/`:
 

@@ -13,47 +13,22 @@ Key things to remember from the main page:
 * Optional arguments are marked with square brackets - e.g. `[optional]`
 * If you want to include spaces in arguments, you must escape the argument with quotes - e.g. `"  "`
 
-___
-
-### Index
-*  [/lp](#lp)
-*  [/lp `sync`](#lp-sync)
-*  [/lp `info`](#lp-info)
-*  [/lp `editor`](#lp-editor-type-filter)
-*  [/lp `verbose` \<on | record | off | upload\> [filter]](#lp-verbose-onrecordoffupload-filter)
-*  [/lp `verbose command` \<me | player\> \<command\>](#lp-verbose-command-meplayer-command)
-*  [/lp `tree` [scope] [player]](#lp-tree-scope-player)
-*  [/lp `search` [comparison] \<permission\>](#lp-search-comparison-permission)
-*  [/lp `networksync`](#lp-networksync)
-*  [/lp `import` \<file | code --upload\> [--replace]](#lp-import-filecode---upload---replace)
-*  [/lp `export` \<file\> [--upload]](#lp-export-file--upload)
-*  [/lp `reloadconfig`](#lp-reloadconfig)
-*  [/lp `bulkupdate`](#lp-bulkupdate-data-type-action-action-field-action-value-constraints)
-*  [/lp `translations`](#lp-translations)
-*  [/lp `creategroup` \<group\> [weight] [displayname]](#lp-creategroup-name-weight-displayname)
-*  [/lp `deletegroup` \<group\>](#lp-deletegroup-name)
-*  [/lp `listgroups`](#lp-listgroups)
-*  [/lp `createtrack` \<track\>](#lp-createtrack-name)
-*  [/lp `deletetrack` \<track\>](#lp-deletetrack-name)
-*  [/lp `listtracks`](#lp-listtracks)
-
-___
-#### `/lp`  
+## `/lp`
 **Permission**: n/a  
 Base LuckPerms command. Will print a list of the LuckPerms commands a user has permission to use, with brief information about what each command does, and what arguments it accepts.  
 
 ___
-#### `/lp sync`  
+## `/lp sync`
 **Permission**: luckperms.sync  
 Performs a refresh of all currently loaded data. If any changes have been made to the data in the storage, this command will update the copy on the server to include those changes. 
 
 ___
-#### `/lp info`  
+## `/lp info`
 **Permission**: luckperms.info  
 Lists some information/data about LuckPerms, including debugging output, statistics, settings, and important values from the configuration. 
 
 ___
-#### `/lp editor [type] [filter]`  
+## `/lp editor [type] [filter]`
 **Permission**: luckperms.editor  
 **Arguments**:  
 * `[type]` - the types to include in the editor session. can be "all", "users", "online" or "groups"
@@ -62,7 +37,7 @@ ___
 Opens a web interface to edit permissions data. After changes are saved, a command will be given that you need to run for the changes to take effect.
 
 ___
-#### `/lp verbose <on|record|off|upload> [filter]`  
+## `/lp verbose <on|record|off|upload> [filter]`
 **Permission**: luckperms.verbose  
 **Arguments**:  
 * `<on|record|off|upload>` - whether to enable/disable logging, or to upload the logged output
@@ -85,7 +60,7 @@ Filters match the start of permissions or the user being checked. You can use `&
 More information can be found [**here**](/wiki/features/verbose)
 
 ___
-#### `/lp verbose command <me|player> <command>`
+## `/lp verbose command <me|player> <command>`
 **Permission**: luckperms.verbose  
 **Arguments**:
 * `<me|player>` - the player to perform the verbose check on. Use `me` to select yourself
@@ -94,7 +69,7 @@ ___
 Controls the LuckPerms verbose logging system. This allows you to execute a command as a specific player and listen for all permission checks against the player on the server for this command.
 
 ___
-#### `/lp tree [scope] [player]`  
+## `/lp tree [scope] [player]`
 **Permission**: luckperms.tree  
 **Arguments**:  
 * `[scope]` - the root of the tree (specify `.` to include all permissions)
@@ -107,7 +82,7 @@ All arguments are optional. The default selection is `.` (just a dot, which mean
 Scope allows you to only generate a part of the tree. For example, a scope of `luckperms.user` will only return the branch of the tree starting with "luckperms.user".
 
 ___
-#### `/lp search [comparison] <permission>`  
+## `/lp search [comparison] <permission>`
 **Permission**: luckperms.search  
 **Arguments**:  
 * `[comparison]` - the relation between the search and the results
@@ -124,12 +99,12 @@ ___
 Searches all users/groups for a specific permission, and returns a paginated list of all found entries. 
 
 ___
-#### `/lp networksync`  
+## `/lp networksync`
 **Permission**: luckperms.sync  
 Refreshes all cached data with the storage provider, and then uses the plugins Messaging Service (if configured) to "ping" all other connected servers and request that they sync too.
 
 ___
-#### `/lp import <file|code --upload> [--replace]`  
+## `/lp import <file|code --upload> [--replace]`
 **Permission**: luckperms.import  
 **Arguments**:  
 * `<file>` - the file to import from
@@ -140,7 +115,7 @@ ___
 Imports data into LuckPerms from a file or from the web. If a file, it must be a JSON GZIP type file, exported from Luckperms v5. If from the web, the code must be generated when exporting with the `--upload` flag. The file is expected to be in the plugin directory. When importing a file, the extension `.json.gz` should be included in the name of the import file. When importing a file or web-export, the `--replace` flag may be added to the end of the command to overwrite and replace the existing permissions setup. If the `--replace` flag is not included, the existing permissions setup will be merged with the imported one.
 
 ___
-#### `/lp export <file|--upload>`  
+## `/lp export <file|--upload>`
 **Permission**: luckperms.export  
 **Arguments**:  
 * `<file>` - the file to export to
@@ -151,12 +126,12 @@ ___
 Exports data from LuckPerms into a file or into web-based datastorage. This file can either be used as a backup, or used to move data between LuckPerms installations. The web-based export will expire and should not be used as a backup. The file and the web-based export can be re-imported using the import command. The generated file will be in the plugin directory.
 
 ___
-#### `/lp reloadconfig`  
+## `/lp reloadconfig`
 **Permission**: luckperms.reloadconfig  
 Reloads some values from the configuration file. Not all entries are reloaded by this command, and some require a full server reboot to take effect. (storage settings, for example)
 
 ___
-#### `/lp bulkupdate <data type> <action> [action field] [action value] [constraints...]`  
+## `/lp bulkupdate <data type> <action> [action field] [action value] [constraints...]`
 **Permission**: **Console Only**  
 **Arguments**:  
 * `<data type>` - the type of data being changed. (can be `all`, `users` or `groups`)
@@ -168,12 +143,12 @@ ___
 Allows you to perform a bulk modification to all permission data. A detailed guide on how to use this command can be found [here](/wiki/guides/bulk-editing).
 
 ___
-#### `/lp translations`  
+## `/lp translations`
 **Permission**: luckperms.translations  
 Shows information about loaded translations, and allows installation of community provided translation bundles.
 
 ___
-#### `/lp creategroup <name> [weight] [displayname]`  
+## `/lp creategroup <name> [weight] [displayname]`
 **Permission**: luckperms.creategroup  
 **Arguments**:  
 
@@ -184,7 +159,7 @@ ___
 Creates a new group.
 
 ___
-#### `/lp deletegroup <name>`  
+## `/lp deletegroup <name>`
 **Permission**: luckperms.deletegroup  
 **Arguments**:  
 * `<name>` - the name of the group
@@ -192,12 +167,12 @@ ___
 Permanently deletes a group.
 
 ___
-#### `/lp listgroups`  
+## `/lp listgroups`
 **Permission**: luckperms.listgroups  
 Displays a list of all current groups.
 
 ___
-#### `/lp createtrack <name>`  
+## `/lp createtrack <name>`
 **Permission**: luckperms.createtrack  
 **Arguments**:  
 * `<name>` - the name of the track
@@ -205,7 +180,7 @@ ___
 Creates a new track.
 
 ___
-#### `/lp deletetrack <name>`  
+## `/lp deletetrack <name>`
 **Permission**: luckperms.deletetrack  
 **Arguments**:  
 * `<name>` - the name of the track
@@ -213,7 +188,7 @@ ___
 Permanently deletes a track.
 
 ___
-#### `/lp listtracks`  
+## `/lp listtracks`
 **Permission**: luckperms.listtracks  
 Displays a list of all current tracks.
 

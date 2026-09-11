@@ -55,7 +55,7 @@ The basic idea is that:
 * `%` - The percent sign represents zero, one, or multiple characters
 * `_` - The underscore represents a single character
 
-##### Some examples
+#### Some examples
 * `server ~~ hub_` will match server values "hub1", "hub2", "hub3" etc
 * `permission !~ group.%` will match any permission which isn't a group
 * `world == nether` will match world values exactly equal to "nether"

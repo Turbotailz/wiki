@@ -5,7 +5,7 @@ description: PlaceholderAPI and other expansions.
 
 LuckPerms has a few placeholders available for use in supported plugins.
 
-### PlaceholderAPI
+## PlaceholderAPI
 To use the LuckPerms placeholders in plugins which support [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/), you need to install the LuckPerms expansion.
 
 To install the latest version of the expansion automagically from clip's ecloud system, simply run `/papi ecloud download LuckPerms` followed by `/papi reload`.
@@ -15,13 +15,13 @@ To manually install the latest version of the expansion, you need to:
 * Download `Expansion-LuckPerms.jar` from [here](https://ci.lucko.me/job/LuckPermsPlaceholders/)
 * Place it in `/plugins/PlaceholderAPI/expansions/`.
 
-### MVdWPlaceholderAPI
+## MVdWPlaceholderAPI
 To use the LuckPerms placeholders in plugins which support [MVdWPlaceholderAPI](https://www.spigotmc.org/resources/mvdwplaceholderapi.11182/), you need to install the LuckPerms placeholder hook plugin.
 
 * Download `LuckPermsMVdWHook.jar` from [here](https://ci.lucko.me/job/LuckPermsPlaceholders/)
 * Place it in your `/plugins/` folder.
 
-### Fabric PlaceholderAPI
+## Fabric PlaceholderAPI
 To use the Fabric LuckPerms placeholders in mods which support [Fabric PlaceholderAPI](https://placeholders.pb4.eu/), you need to install the LuckPerms placeholder hook mod. The placeholder format is slightly different and documented in their docs [here](https://placeholders.pb4.eu/user/mod-placeholders/#luckperms).
 
 * Download `LuckPerms-Fabric-PlaceholderAPI-Hook.jar` from [here](https://ci.lucko.me/job/LuckPermsPlaceholders/)

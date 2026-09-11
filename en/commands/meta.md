@@ -13,35 +13,12 @@ Key things to remember from the main page:
 * Optional arguments are marked with square brackets - e.g. `[optional]`
 * If you want to include spaces in arguments, you must escape the argument with quotes - e.g. `"  "`
 
-___
-
-### Index
-*  [`info`](#lp-usergroup-usergroup-meta-info)
-*  [`set` \<key\> \<value\> [context...]](#lp-usergroup-usergroup-meta-set-key-value-context)
-*  [`unset` \<key\> [context...]](#lp-usergroup-usergroup-meta-unset-key-value-context)
-*  [`settemp` \<key\> \<value\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-meta-settemp-key-value-duration-temporary-modifier-context)
-*  [`unsettemp` \<key\> [context...]](#lp-usergroup-usergroup-meta-unsettemp-key-context)
-*  [`addprefix` \<priority\> \<prefix\> [context...]](#lp-usergroup-usergroup-meta-addprefix-priority-prefix-context)
-*  [`addsuffix` \<priority\> \<suffix\> [context...]](#lp-usergroup-usergroup-meta-addsuffix-priority-suffix-context)
-*  [`setprefix` [priority] \<prefix\> [context...]](#lp-usergroup-usergroup-meta-setprefix-priority-prefix-context)
-*  [`setsuffix` [priority] \<suffix\> [context...]](#lp-usergroup-usergroup-meta-setsuffix-priority-suffix-context)
-*  [`removeprefix` \<priority\> [prefix] [context...]](#lp-usergroup-usergroup-meta-removeprefix-priority-prefix-context)
-*  [`removesuffix` \<priority\> [suffix] [context...]](#lp-usergroup-usergroup-meta-removesuffix-priority-suffix-context)
-*  [`addtempprefix` \<priority\> \<prefix\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-meta-addtempprefix-priority-prefix-duration-temporary-modifier-context)
-*  [`addtempsuffix` \<priority\> \<suffix\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-meta-addtempsuffix-priority-suffix-duration-temporary-modifier-context)
-*  [`settempprefix` [priority] \<prefix\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-meta-settempprefix-priority-prefix-duration-temporary-modifier-context)
-*  [`settempsuffix` [priority] \<suffix\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-meta-settempsuffix-priority-suffix-duration-temporary-modifier-context)
-*  [`removetempprefix` \<priority\> [prefix] [context...]](#lp-usergroup-usergroup-meta-removetempprefix-priority-prefix-context)
-*  [`removetempsuffix` \<priority\> [suffix] [context...]](#lp-usergroup-usergroup-meta-removetempsuffix-priority-suffix-context)
-*  [`clear` \[type\] [context...]](#lp-usergroup-usergroup-meta-clear-type-context)
-
-___
-#### `/lp user/group <user|group> meta info`  
+## `/lp user/group <user|group> meta info`
 **Permission**: luckperms.user.meta.info or luckperms.group.meta.info  
 Displays a list of a user/group's inherited meta (options), prefixes and suffixes.
 
 ___
-#### `/lp user/group <user|group> meta set <key> <value> [context...]`  
+## `/lp user/group <user|group> meta set <key> <value> [context...]`
 **Permission**: luckperms.user.meta.set or luckperms.group.meta.set  
 **Arguments**:  
 * `<key>` - the key to set
@@ -51,7 +28,7 @@ ___
 Sets a meta key value pair for a user/group. These values can be read and modified by other plugins using Vault or the Sponge Permissions API.
 
 ___
-#### `/lp user/group <user|group> meta unset <key> <value> [context...]`  
+## `/lp user/group <user|group> meta unset <key> <value> [context...]`
 **Permission**: luckperms.user.meta.unset or luckperms.group.meta.unset  
 **Arguments**:  
 * `<key>` - the key to unset
@@ -60,7 +37,7 @@ ___
 Unsets a meta key value pair for a user/group.
 
 ___
-#### `/lp user/group <user|group> meta settemp <key> <value> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> meta settemp <key> <value> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.meta.settemp or luckperms.group.meta.settemp  
 **Arguments**:  
 * `<key>` - the key to set
@@ -81,7 +58,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> meta unsettemp <key> [context...]`  
+## `/lp user/group <user|group> meta unsettemp <key> [context...]`
 **Permission**: luckperms.user.meta.unsettemp or luckperms.group.meta.unsettemp  
 **Arguments**:  
 * `<key>` - the key to unset
@@ -90,7 +67,7 @@ ___
 Unsets a temporary meta key value pair for a user/group.
 
 ___
-#### `/lp user/group <user|group> meta addprefix <priority> <prefix> [context...]`  
+## `/lp user/group <user|group> meta addprefix <priority> <prefix> [context...]`
 **Permission**: luckperms.user.meta.addprefix or luckperms.group.meta.addprefix  
 **Arguments**:  
 * `<priority>` - the priority to add the prefix at
@@ -100,7 +77,7 @@ ___
 Adds a prefix to a user/group. You can wrap the prefix in " " quotes to escape spaces. 
 
 ___
-#### `/lp user/group <user|group> meta addsuffix <priority> <suffix> [context...]`  
+## `/lp user/group <user|group> meta addsuffix <priority> <suffix> [context...]`
 **Permission**: luckperms.user.meta.addsuffix or luckperms.group.meta.addsuffix  
 **Arguments**:  
 * `<priority>` - the priority to add the suffix at
@@ -110,7 +87,7 @@ ___
 Adds a suffix to a user/group. You can wrap the suffix in " " quotes to escape spaces. 
 
 ___
-#### `/lp user/group <user|group> meta setprefix [priority] <prefix> [context...]`  
+## `/lp user/group <user|group> meta setprefix [priority] <prefix> [context...]`
 **Permission**: luckperms.user.meta.setprefix or luckperms.group.meta.setprefix  
 **Arguments**:  
 * `[priority]` - the priority to set the prefix at
@@ -120,7 +97,7 @@ ___
 Sets a prefix for a user/group. You can wrap the prefix in " " quotes to escape spaces. This is different from the `addprefix` command in that existing prefixes set in the same context are removed when the new prefix is added. Another difference is that the priority argument is optional in the setprefix command - LuckPerms will determine an appropriate value for the priority when the command is ran.
 
 ___
-#### `/lp user/group <user|group> meta setsuffix [priority] <suffix> [context...]`  
+## `/lp user/group <user|group> meta setsuffix [priority] <suffix> [context...]`
 **Permission**: luckperms.user.meta.setsuffix or luckperms.group.meta.setsuffix  
 **Arguments**:  
 * `[priority]` - the priority to set the suffix at
@@ -130,7 +107,7 @@ ___
 Sets a suffix for a user/group. You can wrap the suffix in " " quotes to escape spaces. This is different from the `addsuffix` command in that existing suffixes set in the same context are removed when the new suffix is added. Another difference is that the priority argument is optional in the setsuffix command - LuckPerms will determine an appropriate value for the priority when the command is ran.
 
 ___
-#### `/lp user/group <user|group> meta removeprefix <priority> [prefix] [context...]`  
+## `/lp user/group <user|group> meta removeprefix <priority> [prefix] [context...]`
 **Permission**: luckperms.user.meta.removeprefix or luckperms.group.meta.removeprefix  
 **Arguments**:  
 * `<priority>` - the priority to remove the prefix at
@@ -140,7 +117,7 @@ ___
 Removes a prefix from a user/group. You can wrap the prefix in " " quotes to escape spaces.
 
 ___
-#### `/lp user/group <user|group> meta removesuffix <priority> [suffix] [context...]`  
+## `/lp user/group <user|group> meta removesuffix <priority> [suffix] [context...]`
 **Permission**: luckperms.user.meta.removesuffix or luckperms.group.meta.removesuffix  
 **Arguments**:  
 * `<priority>` - the priority to remove the suffix at
@@ -150,7 +127,7 @@ ___
 Removes a suffix from a user/group. You can wrap the suffix in " " quotes to escape spaces.
 
 ___
-#### `/lp user/group <user|group> meta addtempprefix <priority> <prefix> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> meta addtempprefix <priority> <prefix> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.meta.addtempprefix or luckperms.group.meta.addtempprefix  
 **Arguments**:  
 * `<priority>` - the priority to add the prefix at
@@ -171,7 +148,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> meta addtempsuffix <priority> <suffix> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> meta addtempsuffix <priority> <suffix> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.meta.addtempsuffix or luckperms.group.meta.addtempsuffix  
 **Arguments**:  
 * `<priority>` - the priority to add the suffix at
@@ -192,7 +169,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> meta settempprefix [priority] <prefix> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> meta settempprefix [priority] <prefix> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.meta.settempprefix or luckperms.group.meta.settempprefix  
 **Arguments**:  
 * `[priority]` - the priority to set the prefix at
@@ -215,7 +192,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> meta settempsuffix [priority] <suffix> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> meta settempsuffix [priority] <suffix> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.meta.settempsuffix or luckperms.group.meta.settempsuffix  
 **Arguments**:  
 * `[priority]` - the priority to set the suffix at
@@ -238,7 +215,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> meta removetempprefix <priority> [prefix] [context...]`  
+## `/lp user/group <user|group> meta removetempprefix <priority> [prefix] [context...]`
 **Permission**: luckperms.user.meta.removetempprefix or luckperms.group.meta.removetempprefix  
 **Arguments**:  
 * `<priority>` - the priority to remove the prefix at
@@ -248,7 +225,7 @@ ___
 Removes a tempoary prefix from a user/group. You can wrap the prefix in " " quotes to escape spaces.
 
 ___
-#### `/lp user/group <user|group> meta removetempsuffix <priority> [suffix] [context...]`  
+## `/lp user/group <user|group> meta removetempsuffix <priority> [suffix] [context...]`
 **Permission**: luckperms.user.meta.removetempsuffix or luckperms.group.meta.removetempsuffix  
 **Arguments**:  
 * `<priority>` - the priority to remove the suffix at
@@ -258,7 +235,7 @@ ___
 Removes a temporary suffix from a user/group. You can wrap the suffix in " " quotes to escape spaces.
 
 ___
-#### `/lp user/group <user|group> meta clear [type] [context...]`  
+## `/lp user/group <user|group> meta clear [type] [context...]`
 **Permission**: luckperms.user.meta.clear or luckperms.group.meta.clear  
 **Arguments**:  
 * `[type]` - the type of meta you would like to clear

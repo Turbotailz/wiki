@@ -13,19 +13,7 @@ Key things to remember from the main page:
 * Optional arguments are marked with square brackets - e.g. `[optional]`
 * If you want to include spaces in arguments, you must escape the argument with quotes - e.g. `"  "`
 
-___
-
-### Index
-*  [`info`](#lp-usergroup-usergroup-permission-info-page-sorting-mode)
-*  [`set` \<node\> \<true/false\> [context...]](#lp-usergroup-usergroup-permission-set-node-truefalse-context)
-*  [`unset` \<node\> [context...]](#lp-usergroup-usergroup-permission-unset-node-context)
-*  [`settemp` \<node\> \<true/false\> \<duration\> [temporary modifier] [context...]](#lp-usergroup-usergroup-permission-settemp-node-truefalse-duration-temporary-modifier-context)
-*  [`unsettemp` \<node\> [duration] [context...]](#lp-usergroup-usergroup-permission-unsettemp-node-duration-context)
-*  [`check` \<node\>](#lp-usergroup-usergroup-permission-check-node)
-*  [`clear` [context...]](#lp-usergroup-usergroup-permission-clear-context)
-
-___
-#### `/lp user/group <user|group> permission info [page] [sorting mode]`  
+## `/lp user/group <user|group> permission info [page] [sorting mode]`
 **Permission**: luckperms.user.permission.info or luckperms.group.permission.info  
 **Arguments**:  
 * `[page]` - the page number to view
@@ -43,7 +31,7 @@ The "sorting mode" argument allows you to specify how the list will be sorted. Y
 | `!abc`/`!alphabetically` | will sort the list alphabetically and then reverse it (Z - A)            |
 
 ___
-#### `/lp user/group <user|group> permission set <node> [true|false] [context...]`  
+## `/lp user/group <user|group> permission set <node> [true|false] [context...]`
 **Permission**: luckperms.user.permission.set or luckperms.group.permission.set  
 **Arguments**:  
 * `<node>` - the permission node to set
@@ -53,7 +41,7 @@ ___
 Sets (or gives) a permission for a user/group with "true", granting the permission. Providing a value of "false" will negate the permission. Not adding any context will set the permission in context "global".
 
 ___
-#### `/lp user/group <user|group> permission unset <node> [context...]`  
+## `/lp user/group <user|group> permission unset <node> [context...]`
 **Permission**: luckperms.user.permission.unset or luckperms.group.permission.unset  
 **Arguments**:  
 * `<node>` - the permission node to unset
@@ -62,7 +50,7 @@ ___
 Unsets (or removes) a permission for a user/group.
 
 ___
-#### `/lp user/group <user|group> permission settemp <node> <true|false> <duration> [temporary modifier] [context...]`  
+## `/lp user/group <user|group> permission settemp <node> <true|false> <duration> [temporary modifier] [context...]`
 **Permission**: luckperms.user.permission.settemp or luckperms.group.permission.settemp  
 **Arguments**:  
 * `<node>` - the permission node to set
@@ -82,7 +70,7 @@ The "temporary modifier" argument allows you to specify how the permission shoul
 | `deny`       | the command will just fail if you try to add a duplicate temporary node   |
 
 ___
-#### `/lp user/group <user|group> permission unsettemp <node> [duration] [context...]`  
+## `/lp user/group <user|group> permission unsettemp <node> [duration] [context...]`
 **Permission**: luckperms.user.permission.unsettemp or luckperms.group.permission.unsettemp  
 **Arguments**:  
 * `<node>` - the permission node to unset
@@ -92,7 +80,7 @@ ___
 Unsets a temporary permission for a user/group.
 
 ___
-#### `/lp user/group <user|group> permission check <node>`  
+## `/lp user/group <user|group> permission check <node>`
 **Permission**: luckperms.user.permission.check or luckperms.group.permission.check  
 **Arguments**:  
 
@@ -101,7 +89,7 @@ ___
 Checks to see if a user/group has a certain permission, providing useful information about the factors that influenced the result of the check.
 
 ___
-#### `/lp user/group <user|group> permission clear [context...]`  
+## `/lp user/group <user|group> permission clear [context...]`
 **Permission**: luckperms.user.permission.clear or luckperms.group.permission.clear  
 **Arguments**:  
 * `[context...]` - the [contexts](/wiki/features/context) to filter by

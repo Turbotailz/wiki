@@ -3,22 +3,11 @@ title: Getting started
 description: Learn the basics of groups, users, and permissions.
 ---
 
-### Contents
-* [Key Concepts](#key-concepts)
-* [Getting Started](#getting-started)
-  * [Granting full access to LuckPerms](#granting-full-access-to-luckperms)
-  * [Creating the first group](#creating-the-first-group)
-  * [Adding a user to a group](#adding-a-user-to-a-group)
-  * [Making a group inherit another group](#making-a-group-inherit-another-group)
-  * [Removing parent groups](#removing-parent-groups)
-  * [Finding Permissions](#finding-permissions)
-  * [Web Editor](#web-editor)
-
 If you're already familiar with what LuckPerms is and what it does, then feel free to skip directly to the [Command Usage and Permissions](/wiki/commands) section, which is more of a quick reference.
 
 Otherwise, read on! To start with, let's go over some key concepts...
 
-# Key Concepts
+## Key Concepts
 ### Permission
 On your server, there will be certain **features, commands, and functionality** which exist. Some of these features will be included with the server, and others are added with "plugins" or "mods". Most of these actions **have a permission associated with them**, so you can control which users have access to each feature or command.
 
@@ -54,12 +43,12 @@ A term that you will encounter quite often with LuckPerms is "context".
 
 Contexts are such a fundamental part of the plugin, they have their [very own wiki page](/wiki/features/context) dedicated to explaining their use. :)
 
-# Getting Started
+## Getting Started
 If you haven't got LuckPerms installed just yet, please refer to the [installation guide](/wiki/install) first.
 
 Then, please make sure you read the section about [choosing a Storage type](/wiki/storage) before proceeding. Whilst it is possible to change these options later, it's better to get them right the first time around.
 
-## Granting full access to LuckPerms
+### Granting full access to LuckPerms
 The first thing you'll want to do is give yourself full access to the plugin. When LuckPerms is first installed, nobody has access to any of the LP commands.
 
 To do this, login to your server, and then open the server console.
@@ -75,7 +64,7 @@ Effectively, what we've done there is give your user the `luckperms.*` permissio
 
 Now you've done this, you can either continue the setup process in-game, or keep typing commands into the console.
 
-## Creating the first group
+### Creating the first group
 You can create a new group with the creategroup command. Let's create a new group called admin, and then give it a permission.
 
 First, run `lp creategroup admin`. This will create a new empty group named "admin".
@@ -109,7 +98,7 @@ If I decide later that I don't want admin to have this permission anymore, I can
 
 > The `minecraft.command.ban` permission is just an example, and if you're using a different platform (e.g. not a Minecraft server), the permission for the ban command will be different, but the concept is the same!
 
-## Adding a user to a group
+### Adding a user to a group
 Adding users to a group can be done with the "parent" command. (we just swap "permission" for "parent" in our command usage)
 
 For example, to add myself to the admin group, I would run `lp user Luck parent add admin`.
@@ -118,7 +107,7 @@ For example, to add myself to the admin group, I would run `lp user Luck parent 
 
 This command adds the user `Luck` to the `admin` group. This means that any permissions admin has, I also have through inheritance.
 
-## Making a group inherit another group
+### Making a group inherit another group
 As well as users, groups are also able to inherit other groups.
 
 For example, suppose the following setup. (the permissions are not real, just examples)
@@ -142,14 +131,14 @@ The inheritance is recursive, so since although admin how only inherits directly
   <img src="../img/usage-inheritance-1.png" height="800"/>
 </p>
 
-## Removing parent groups
+### Removing parent groups
 Removing parent groups is done with a spookily similar command.
 
 To remove myself from admin, I'd just run `lp user Luck parent remove admin`.
 
 ![](../img/usage-10.png)
 
-## Finding permissions
+### Finding permissions
 
 So far we have just been using made-up example permissions, but on your server, you'll want to use ones that actually relate to some functionality or ability, like a command.
 
@@ -161,7 +150,7 @@ There's a couple of ways to find out what these are:
 * Use **auto-complete** (either in commands or web editor)
     * Note: The auto-complete list is not exhaustive! It is just the permissions LuckPerms has "seen" since the server started. If a permission isn't listed, you can still use it.
 
-### Verbose command
+#### Verbose command
 
 The [Verbose](/wiki/features/verbose) command allows you (as the server admin) to monitor permission checks occurring in real time! This is the most reliable way to find permissions (and figure out why they aren't working as intended).
 
@@ -180,7 +169,7 @@ You can also use `/lp verbose on <test user>` to simply print the output to the 
 
 More advanced usage is documented on the Verbose [wiki page](/wiki/features/verbose).
 
-## Web Editor
+### Web Editor
 
 Are commands too much typing for you?! LuckPerms has a fancy online [Web Editor](/wiki/features/web-editor) which allows you to edit your permissions setup easily in an interactive web page.
 

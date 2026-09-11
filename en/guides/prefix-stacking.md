@@ -3,12 +3,12 @@ title: Prefix and suffix stacking
 description: Stack multiple prefixes and suffixes.
 ---
 
-### What does it do?
+## What does it do?
 The "meta stacking" feature allows you to display multiple prefixes or suffixes alongside a players username in chat.
 
 You still need to have a chat formatting plugin installed. 
 
-### How does it work?
+## How does it work?
 When the chat formatting plugin requests a players prefix/suffix, instead of just returning the prefix with the highest weight, LuckPerms can apply a set of rules to combine a number of prefixes/suffixes together.
 
 The default settings look like this:
@@ -32,7 +32,7 @@ meta-formatting:
 
 All this means is that when a prefix  or suffix is requested, the one with the highest weight is returned.
 
-### How do I add other elements?
+## How do I add other elements?
 The following elements are allowed.
 
 | Element | Description |
@@ -52,7 +52,7 @@ The following elements are allowed.
 | `highest_not_from_group_<group>` | Selects the value with the highest weight, but only if the value was not inherited from the given group. |
 | `lowest_not_from_group_<group>` | Same as above, except takes the value with the lowest weight. |
 
-### Duplicate Settings
+## Duplicate Settings
 | Element | Description |
 |---------|-------------|
 | `first-only` | Allows only the first duplicate |
@@ -60,7 +60,7 @@ The following elements are allowed.
 | `retain-all` | Allows all duplicates |
 | `none` | Allows no duplicates |
 
-### An example
+## An example
 For example, on a prison server, you might have 3 types of group. The "gameplay" rank, a user's donor group, and staff groups.
 
 If a user is in all 3 groups, I want all three prefixes to display. e.g.   

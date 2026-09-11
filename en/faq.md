@@ -3,7 +3,7 @@ title: FAQ
 description: Frequently asked questions about LuckPerms.
 ---
 
-# Frequently Asked Questions
+## Frequently Asked Questions
 These are some of the questions that are asked quite frequently. Please check to see if your question has already been answered here before seeking support.
 
 **Tip: Always check your console for any errors during start up or whenever something goes wrong!**

@@ -9,7 +9,7 @@ If you'd like more information about the technical details, please see the [tech
 
 ___
 
-### Getting started
+## Getting started
 
 Editor sessions are first created by executing a command on the server.
 You can run different commands to open sessions with different scopes:
@@ -43,17 +43,17 @@ Your default web browser should then open the new editor session you've created.
 
 ___
 
-### Using the editor
+## Using the editor
 
 Once you've created and opened the session, you can use the interface to make changes to the user/group's data.
 
-### Editor Context
+## Editor Context
 
 You can add contexts in the editor in addition to in-game. To do so, either click the "Add Contexts" button before adding a permission or simply fill in the `key` and `value` fields after a permission with appropriate keys and values, such as `world` and `nether`, or `server` and `hub`.
 
 Note that a permission can only have one world and one server context at a time. You have to set the same permission again with the other context to make it apply on multiple worlds/servers.
 
-#### Adding a permission
+### Adding a permission
 
 To add a permission, type the node you'd like to add into the "Add Permission" input box and press enter. You can repeat this for all permissions that you want to add with the same properties.  
 When typing the editor will show a list of suggestions matching your input so far. You can select one through the arrow keys or with your cursor and include it by pressing enter or clicking on it.
@@ -63,19 +63,19 @@ You can add multiple permissions at once! Just type or copy/paste them into the 
 
 ![](../img/webeditor-3.gif)
 
-#### Editing existing data
+### Editing existing data
 
 To edit any value in the table, just click it.
 
 ![](../img/webeditor-4.gif)
 
-#### Sorting the data
+### Sorting the data
 
 To change the sorting settings, click on the column heading you'd like to sort by.
 
 ![](../img/webeditor-5.gif)
 
-#### LuckPerms Nodes
+### LuckPerms Nodes
 
 The editor allows you to add or change aspects about groups and players such as weight and parents using nodes.
 
@@ -90,7 +90,7 @@ The editor allows you to add or change aspects about groups and players such as 
 
 ___
 
-### Saving your changes
+## Saving your changes
 
 Once you've finished making changes to the data, you need to save your changes back to the server.
 

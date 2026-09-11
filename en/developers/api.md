@@ -3,11 +3,11 @@ title: Developer API
 description: Introduction to the LuckPerms API.
 ---
 
-### Intro
+## Intro
 
 LuckPerms has a complete developer API, which allows other plugins on the server to read and modify LuckPerms data, and easily integrate LuckPerms deeply into existing plugins and systems.
 
-### Versioning
+## Versioning
 
 The API uses [Semantic Versioning](https://semver.org/), meaning whenever a non-backwards compatible change is made, the major version will increment. You can rest assured knowing your integration will not break between versions, providing the major version remains the same.
 
@@ -16,7 +16,7 @@ The current API release is `5.5`.
 * The API package in LuckPerms is `net.luckperms.api`.
 * JavaDocs are available either in [a standard JavaDoc layout](https://javadoc.io/doc/net.luckperms/api/latest/), or within the API [source code](https://github.com/LuckPerms/LuckPerms/tree/master/api/src/main/java/net/luckperms/api).
 
-#### Changelogs
+### Changelogs
 
 * Version `2.x` represented the initial release of the API. 
 * Version `3.x` (19th Feb 17) introduced a number of backwards incompatible changes. [[changelog](https://gist.github.com/lucko/fdf6ae4b2d9e466d8103dd9c68e5db9e)]

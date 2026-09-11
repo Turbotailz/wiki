@@ -3,7 +3,7 @@ title: External connections
 description: What LuckPerms connects to, and why.
 ---
 
-### Summary
+## Summary
 The tl;dr is...
 
 * LuckPerms uses an internet connection to securely download required libraries and translation bundles when it first starts
@@ -14,13 +14,13 @@ The specific nature of these interactions and usages are documented below.
 
 ___
 
-### Downloading libraries
+## Downloading libraries
 
 LuckPerms makes use of a lot of libraries - all of which are listed [here](/wiki/about/credits#open-source).
 
 The plugin can be configured and used in a number of ways. For example, it supports a number of storage methods, each of which require their own set of drivers. Most plugins simply bundle (or "shade") these libraries into the plugin jar file - however, this is not practical for LuckPerms, as the high number of libraries would produce a huge final jar size. The solution is to download the *required* libraries at runtime, depending on the configuration being used.
 
-##### The download process
+### The download process
 
 * Downloads will only be attempted for libraries which are required
 * Downloaded binaries are cached in the `/LuckPerms/libs/` folder after the initial download. If a library is already present here, a connection to the download server will not be attempted.
@@ -33,7 +33,7 @@ Maven Central is a trustworthy source - it is used by most Java developers and o
 
 As a precautionary measure in case either of the sites become compromised, the plugin will perform additional verification during the download process to ensure that libraries are intact and as expected. 
 
-##### The verification process
+### The verification process
 
 Each dependency that can be downloaded at runtime, along with it's version and location within Maven Central is defined in [this source code file](https://github.com/LuckPerms/LuckPerms/blob/master/common/src/main/java/me/lucko/luckperms/common/dependencies/Dependency.java) in LuckPerms.
 
@@ -52,7 +52,7 @@ These checks are put in place to minimise the risk of malicious code from being 
 
 ___
 
-### Downloading translation bundles
+## Downloading translation bundles
 
 The messages used in LuckPerms commands have kindly been [translated by the community](/wiki/about/locale).
 
@@ -64,7 +64,7 @@ The functionality can be disabled in the LuckPerms config.
 
 ___
 
-### Web apps (`/lp editor` etc)
+## Web apps (`/lp editor` etc)
 
 LuckPerms has a number of web apps that are hosted centrally for everyone to use.
 
@@ -96,7 +96,7 @@ Additional technical details can be found [here](/wiki/features/web-editor/techn
 
 ___
 
-### Metrics and auto-updaters
+## Metrics and auto-updaters
 
 * LuckPerms **does not** and never will report back to analytics or monitoring services.
 * LuckPerms **does not** and never will automatically check for (or automatically install 😠) updates. 

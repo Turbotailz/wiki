@@ -15,7 +15,7 @@ Secondly, there is an additional resource that you can install to your server th
 
 Good luck, and we hope you enjoy using LuckPerms!
 
-#### GroupManager command equivalents
+## GroupManager command equivalents
 | GroupManager                               | LuckPerms                                                |
 | ------------------------------------------ | -------------------------------------------------------- |
 | manuadd \<player\> \<group\>               | lp user \<player\> parent set \<group\>                  |
@@ -54,7 +54,7 @@ Good luck, and we hope you enjoy using LuckPerms!
 | manload                                    | lp sync                                                  |
 
 
-#### PermissionsEx command equivalents
+## PermissionsEx command equivalents
 | PermissionsEx                                                | LuckPerms                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | pex                                                          | lp                                                           |

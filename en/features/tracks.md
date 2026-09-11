@@ -13,7 +13,7 @@ Note that tracks act only as a means for easy promotion and demotion of users, a
 
 ---
 
-### Example 1
+## Example 1
 I might have a track called "staff". This track would consist the groups:
 
 **default :arrow_right: helper :arrow_right: mod :arrow_right: admin**
@@ -24,7 +24,7 @@ For example, if "Notch" was in the helper group, and I wanted to make him mod, I
 
 `/luckperms user Notch promote staff`
 
-### Example 2
+## Example 2
 I might have another track for donators, consisting of:
 
 **default :arrow_right: iron :arrow_right: gold :arrow_right: diamond**

@@ -5,7 +5,7 @@ description: Move to LuckPerms from another permissions plugin.
 
 LuckPerms is able to automatically import permissions data from other plugins - we call this system "migration".
 
-### Intro
+## Intro
 It should be noted that these scripts are not perfect. They will do a pretty decent job at converting all of your existing data, and work perfectly in *most cases*. However, not all data is the same, and there are sometimes things I haven't accounted for.
 
 LuckPerms has some similarities with other permission plugins, however, some parts are fundamentally different, and therefore sometimes automatic migration is tricky.
@@ -15,7 +15,7 @@ Additionally, letting the plugin migrate all of your data for you means you will
 If you have an old permissions setup, or a setup you're not completely happy with, now might be a great time to have a restructure and cleanup, and a chance to learn LuckPerms commands in the process!
 
 
-#### Supported plugins
+### Supported plugins
 Migration is supported for:
 
 * GroupManager
@@ -30,7 +30,7 @@ Migration is supported for:
 ## The process
 The migration process is fairly simple, however it varies slightly for each platform.
 
-#### Step 1: Install LuckPerms
+### Step 1: Install LuckPerms
 
 Firstly, you need to [install LuckPerms](/wiki/install). Don't remove your old permissions plugin yet.
 
@@ -38,7 +38,7 @@ Ensure that your old permissions plugin is still enabling properly. The migratio
 
 If you intend to change your data [storage type](/wiki/storage), for instance, to mysql, it is easiest to do this now. If you decide to change storage types after the migration, follow the instructions in [Switching Storage Types](/wiki/guides/switching-storage).
 
-#### Step 2: Install the correct migration plugin
+### Step 2: Install the correct migration plugin
 
 Download the jar that corresponds to your existing permission plugin from the table below. Add it to your plugins folder too.
 
@@ -53,7 +53,7 @@ Download the jar that corresponds to your existing permission plugin from the ta
 | UltraPermissions  | [luckperms-migration-ultrapermissions.jar](https://ci.lucko.me/job/luckperms-migration/lastSuccessfulBuild/artifact/ultrapermissions/build/libs/luckperms-migration-ultrapermissions.jar) | `/migrate-ultrapermissions` |
 | BungeePerms       | [luckperms-migration-bungeeperms.jar](https://ci.lucko.me/job/luckperms-migration/lastSuccessfulBuild/artifact/bungeeperms/build/libs/luckperms-migration-bungeeperms.jar) | `/migrate-bungeeperms`       |
 
-#### Step 3: Restart your server, then run the migration command.
+### Step 3: Restart your server, then run the migration command.
 
 Restart the server to allow your existing plugin, LuckPerms, and the migration plugin to load correctly.
 

@@ -7,7 +7,7 @@ This guide covers how to setup and manage prefixes, suffixes and meta with LuckP
 
 If you are already familiar with these concepts, and just want to view how the commands work, then you should read the [Command Usage: Meta](/wiki/commands/meta) page.
 
-# Key Definitions
+## Key Definitions
 ### Prefix / Suffix
 Prefixes and suffixes on Minecraft servers relate to the text that comes before and after your username in chat.
 
@@ -26,12 +26,12 @@ max-homes = 5
 username-color: blue
 ```
 
-## Who provides what?
+### Who provides what?
 Generally, plugins which provide and manage permissions on your server will also have functionality to allow you to set, manage and store prefixes/suffixes/meta. This is true of LuckPerms.
 
 Occasionally, permissions plugins will also provide the means to apply this data to the chat. This is not the case for LuckPerms, and you'll need an additional plugin to apply chat formatting for you. More on this later.
 
-## How do prefixes/suffixes/meta get stored
+### How do prefixes/suffixes/meta get stored
 Prefixes and suffixes in LuckPerms are converted and stored as permission nodes. You'll notice that when you add a prefix or suffix to a user/group, that a new entry will appear in their permissions data which relates to the value you set. Why do it this way? Well, it makes things much easier from a programming point of view to have everything stored in the same place, and in similar formats. It also means you can easily manipulate prefix and suffix data in the same way you do for permissions.
 
 Prefixes and suffixes are split up into two parts
@@ -42,7 +42,7 @@ A prefix of `"[Admin] "`, set with a weight of 100 translates into the permissio
 
 A similar system is used for meta. A meta pair, `favourite-color = red` would translate into the permission: `meta.favourite-color.red`.
 
-## How does prefix/suffix weight work
+### How does prefix/suffix weight work
 Prefixes and suffixes can be inherited in the same way as permissions. This means that LuckPerms needs to determine which prefix/suffix to actually use for a player, when it gets requested.
 
 When another plugin asks for a Users prefix/suffix, LuckPerms will:
@@ -52,7 +52,7 @@ When another plugin asks for a Users prefix/suffix, LuckPerms will:
 
 If two entries with the same weight are found, the one closest to the user is used first. Closest meaning the one that was discovered first by the plugin when searching the inheritance tree for data.
 
-## How do I actually set prefixes and suffixes for a user
+### How do I actually set prefixes and suffixes for a user
 For example, if I want people in the admin group to have the "&c[Admin] " prefix, and people in the mod group to have the "&d[Mod] " prefix, I would run:
 
 * /lp creategroup admin
@@ -70,19 +70,19 @@ The command usage for setting prefixes/suffixes temporarily follows the same for
 
 The full command usages can be found [**here**](/wiki/commands/meta). The commands for adding and removing meta are also documented there.
 
-## How do I see the prefixes/suffixes a user or group has
+### How do I see the prefixes/suffixes a user or group has
 The easiest way to debug issues with prefixes/suffixes is to use the info command.
 
 For example: `/lp user Luck meta info`. This will list all of the prefixes, suffixes and meta a user has and inherits, and will order the entries by weight, so you can easily see which values are being applied.
 
 Another useful command is the general user info command: `/lp user Luck info`. If the player is online on the server, this will show you which of their prefixes is currently being provided to plugins looking to read data from LuckPerms.
 
-## Displaying prefixes and suffixes
+### Displaying prefixes and suffixes
 As mentioned earlier, LuckPerms does not handle any of the chat formatting for you. You will need to install an external plugin to do it for you.
 
 Some recommendations are listed below.
 
-### Bukkit/Spigot
+#### Bukkit/Spigot
 LuckPerms has support for **any** chat formatting plugin which can read data from [Vault](https://dev.bukkit.org/projects/vault). You need to have Vault installed on your server for this to work.
 
 If you're having issues with a plugin not picking up data correctly, please make sure the output of `/vault-info` shows that data is being read from LuckPerms.
@@ -111,7 +111,7 @@ Some popular tab/nametag formatting plugins which work with LuckPerms + Vault in
 This is by no means a definitive list. Anything that supports Vault also supports LuckPerms!
 
 
-### BungeeCord
+#### BungeeCord
 
 Some popular chat formatting plugins which work with LuckPerms on BungeeCord include:
 * [gChat](https://github.com/lucko/gChat) - recommended if you just want something simple.
@@ -122,14 +122,14 @@ Some popular tab/nametag formatting plugins which work with LuckPerms on BungeeC
 * [BungeeTabListPlus](https://www.spigotmc.org/resources/313/)
 * [TAB](https://github.com/NEZNAMY/TAB)
 
-### Sponge
+#### Sponge
 * [Nucleus](https://nucleuspowered.org/) - an "essentials" like plugin, which also includes a [module for chat formatting](https://nucleuspowered.org/docs/modules/chat.html).
 
-### Fabric
+#### Fabric
 * [Styled Chat](https://modrinth.com/mod/styled-chat) - includes chat formatting, uses [Fabric TextPlaceholderAPI](https://placeholders.pb4.eu) - Note that manual configuration is required and you need to use the [LuckPerms __Fabric__ PlaceholderAPI Addon](https://luckperms.net/download) for this mod to work with LuckPerms.
 * [Styled Player List](https://modrinth.com/mod/styledplayerlist) - includes tablist formatting, uses [Fabric TextPlaceholderAPI](https://placeholders.pb4.eu) - Note that manual configuration is required and you need to use the [LuckPerms __Fabric__ PlaceholderAPI Addon](https://luckperms.net/download) for this mod to work with LuckPerms.
 * [GraphiXMod](https://github.com/lochnessdragon/GraphiXMod) - includes chat formatting, holograms, tablist and scoreboard.
 * [Chatter](https://github.com/Axieum/Chatter) - includes chat formatting and Discord integration
 
-### Forge
+#### Forge
 * [BetterForgeChat](https://www.curseforge.com/minecraft/mc-mods/betterforgechat-with-luckperms-support) - Includes chat formatting, tablist, ftbessentials nicknames, and markdown styling.

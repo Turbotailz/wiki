@@ -62,7 +62,7 @@ The more general [Installation](/wiki/install) guide provides details about how 
 
 Once LuckPerms has been installed, you need to stop the server, open the main configuration file, and pay particular attention to the following options:
 
-#### [`server`](/wiki/configuration#server)
+### [`server`](/wiki/configuration#server)
 
 If you want to set permissions or assign group inheritances on a per server basis within your setup, you'll need to change the value of `server` in your configuration file. (this is conveniently located right at the top of the file! 😄)
 
@@ -70,13 +70,13 @@ This value is used to define a "server" context for all players when they're con
 
 More information about defining server and world specific permissions can be found [here](/wiki/reference/permission-calculation) and [here](/wiki/features/context).
 
-#### [`storage-method`](/wiki/configuration#storage-method)
+### [`storage-method`](/wiki/configuration#storage-method)
 
 As mentioned at the top of this page, if you want data to sync between instances, then all of your LuckPerms instances need to connect to the same database. 
 
 This means that `storage-method` should be set to 'mysql', 'mariadb', 'postgresql' or 'mongodb'. Remember to fill out your database connection info when you change these options!
 
-#### [`messaging-service`](/wiki/configuration#messaging-service)
+### [`messaging-service`](/wiki/configuration#messaging-service)
 
 The "Messaging Service" is a feature within LuckPerms which allows servers to notify other servers within the network whenever changes are made. It also allows log entries to be dispatched across the network.
 

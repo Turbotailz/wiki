@@ -9,11 +9,9 @@ Welcome to the LuckPerms project - it's good to have you!
 
 The purpose of this page is to answer a number of questions/reactions people tend to have when they first discover the project, and explain why we think you should use LuckPerms!
 
-Let's start with some FAQs.
+## Frequently asked questions
 
-___
-
-#### Yet another permissions plugin?
+### Yet another permissions plugin?
 Yep. We thought there was room for improvement among the plugins already out there!
 
 LuckPerms is:
@@ -25,21 +23,21 @@ LuckPerms is:
 * **extensive** - a plethora of customization options and settings which can be changed to suit your server.
 * **free** - available for download and usage at no cost, and permissively licensed so it can remain free forever.
 
-#### I've been using [x] plugin for years and it works great! Why should I bother switching?
+### I've been using [x] plugin for years and it works great! Why should I bother switching?
 Most other permission plugins date back a number of years, and increasingly have been abandoned by their original authors, receive no updates, support or bug fixes. LuckPerms is still an active resource and we endeavour to reply to all bug reports, issues and feature requests in a timely manner.
 
-#### LuckPerms seems pretty big/complex and I just want something simple and lightweight.
+### LuckPerms seems pretty big/complex and I just want something simple and lightweight.
 Although the plugin has lots of customisation options, the default values are fine for most users.
 The LuckPerms in-game and online interfaces are very straight forward to use, and there is a vast array of information and setup guides you can read here on our wiki! 🎉
 
-#### I run a big network and performance is important. How does LuckPerms perform?
+### I run a big network and performance is important. How does LuckPerms perform?
 The plugin has been written and improved over time with large servers in mind. It has proven itself to be very fast and reliable. LuckPerms currently runs on a number of popular networks in the community.
 
 LuckPerms has been designed to make use of multithreading for almost all of its operations. Lookups for permission checks and meta data are cached, and the internal data structures are designed in order to make queries as fast/efficient as possible.
 
 ___
 
-For the rest of this page, let's focus on some of the cool features LuckPerms has, which you may not have seen before / been aware of!
+## Features
 
 ### Web Editor
 As well as the in-game/console command interface, LuckPerms has a web editor which you can use to make changes to your permission data.

@@ -7,7 +7,7 @@ Command usage is printed to the console/chat whenever invalid arguments are prov
 
 If the only thing returned when you type a command is the plugin version, you do not have permission to use any of the commands. You need to use the server console to [give yourself access to LuckPerms commands first](/wiki/getting-started#granting-full-access-to-modify-permissions).
 
-### Aliases
+## Aliases
 A list of aliases for each platform are listed below. Each command works in exactly the same manner, so you can use whichever you prefer.
 
 | Bukkit / Sponge / Fabric / Forge / Nukkit   | BungeeCord         | Velocity             |
@@ -22,8 +22,8 @@ A list of aliases for each platform are listed below. Each command works in exac
 
 If you are using Bukkit/Spigot, by default, all users with OP have access to LuckPerms commands. You can change this in the config.
 
-# Overview
-#### Arguments Key:
+## Overview
+### Arguments Key:
 * `<required>` - you *must* specify this argument when running the command
 * `[optional]` - you do not need to specify this argument. a default will be used if not given.
 

@@ -9,7 +9,7 @@ They're essentially "plugins for a plugin" - a bit confusing, and maybe overkill
 
 ___
 
-### Installing extensions
+## Installing extensions
 
 Extensions come in the form of `.jar` files. To install them:
 

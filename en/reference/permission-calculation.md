@@ -9,7 +9,7 @@ Whilst the basics of LuckPerms are fairly simple, you can leverage a number of f
 ## Server and World specific permissions
 LuckPerms is designed for multi-server networks. You can define permissions that only apply on certain servers and in certain worlds.
 
-#### Some important config options:
+### Some important config options:
 ```yml
 # The name of the server, used for server specific permissions. Set to 'global' to disable.
 server: global

@@ -5,7 +5,7 @@ description: Choose how LuckPerms stores permission data.
 
 LuckPerms can store its data in a number of ways. These options can be changed in the "Storage Settings" section of the config file.
 
-### Possible options
+## Possible options
 
 * **Remote databases** - require connection to a storage server hosted separately
   * MySQL
@@ -23,7 +23,7 @@ LuckPerms can store its data in a number of ways. These options can be changed i
 
 The default option is `H2`.
 
-#### Remote databases
+### Remote databases
 | Benefits | Drawbacks |
 |----------------------------------------------------------------------|-----------------------------------------------|
 | Allows data to be shared between multiple servers.                   | Complicated to setup??                        |
@@ -31,14 +31,14 @@ The default option is `H2`.
 | Can generally handle more data, and supports concurrent reads/writes |                                               |
 | Indexed, more efficient when performing bulk queries and updates     |                                               |
 
-#### Flatfile databases
+### Flatfile databases
 | Benefits                                                         | Drawbacks                                       |
 |------------------------------------------------------------------|-------------------------------------------------|
 | Generally more reliable and more efficient than editable files   | Not (easily) possible to edit the data directly |
 | Indexed, more efficient when performing bulk queries and updates | Sometimes prone to data corruption issues       |
 |                                                                  | Data cannot be shared between servers           |
 
-#### Text (config) files
+### Text (config) files
 | Benefits | Drawbacks |
 |----------|-----------|
 | Human readable!                                  | Less efficient use of disk space compared to a flatfile database                     |
@@ -48,9 +48,9 @@ The default option is `H2`.
 
 ___
 
-### More details
+## More details
 
-#### Flatfile/local databases (H2 & SQLite)
+### Flatfile/local databases (H2 & SQLite)
 * All data is stored within one file in the LuckPerms folder.
 * The data cannot be easily edited with a text editor, unlike YAML or JSON.
 * The plugin commands must be used to edit or view the data.
@@ -64,7 +64,7 @@ storage-method: h2
 storage-method: sqlite
 ```
 
-#### Readable & editable text files (YAML / JSON / HOCON / TOML)
+### Readable & editable text files (YAML / JSON / HOCON / TOML)
 * Data is stored in multiple files within the LuckPerms folder.
 * The files can be read/edited when the server is running, and changes will be automatically applied.
 
@@ -85,7 +85,7 @@ storage-method: hocon
 storage-method: toml
 ```
 
-#### Remote databases (MySQL / MariaDB / PostgreSQL / MongoDB)
+### Remote databases (MySQL / MariaDB / PostgreSQL / MongoDB)
 You will need to input the address, port, database, username and password values for your database server into the configuration file.   
    
 This option is recommended for users expecting to store a lot of data, or thinking about expanding into a network of servers. If you are already running multiple servers and want to sync data between them, then you need to use a remote database type.   
@@ -102,8 +102,8 @@ storage-method: mongodb
 
 ___
 
-### Example files
-##### Example YAML file
+## Example files
+### Example YAML file
 ```yml
 uuid: c1d60c50-70b5-4722-8057-87767557e50d
 name: Luck
@@ -127,7 +127,7 @@ meta:
     value: '10'
 ```
 
-##### Example JSON file
+### Example JSON file
 ```json
 {
   "uuid": "c1d60c50-70b5-4722-8057-87767557e50d",
@@ -174,7 +174,7 @@ meta:
 }
 ```
 
-##### Example HOCON file
+### Example HOCON file
 ```conf
 uuid=c1d60c50-70b5-4722-8057-87767557e50d
 name=Luck
@@ -219,7 +219,7 @@ meta=[
 ]
 ```
 
-##### Example TOML file
+### Example TOML file
 ```toml
 uuid = "c1d60c50-70b5-4722-8057-87767557e50d"
 name = "Luck"

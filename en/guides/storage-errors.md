@@ -26,7 +26,7 @@ Some common errors are listed below. If your issue isn't here, then feel free to
 
 ___
 
-# Common errors
+## Common errors
 
 ### LuckPerms cannot connect to my MySQL server
 
